@@ -1,2 +1,2 @@
-# tsa-webmaster-space-tourism
+# Galactitrek
 Website for TSA Webmaster competition with a theme of space tourism
