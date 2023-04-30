@@ -1,0 +1,71 @@
+<body style="margin: 0px">
+<div id="canvasContainer" style="position: relative;">
+<canvas id="body" width="calc(100% - 100px)" height="100%" style="background-color: black; padding: 0; margin: 0; "></canvas>
+</div>
+</body>
+<script>
+	var stars = []
+	
+	class pos {
+		constructor(x, y, z) {
+			this.x = x;
+			this.y = y;
+			this.z = z;
+			stars.push(this)
+		}
+	}
+	var canvas = document.getElementById("body");
+	var ctx = canvas.getContext("2d");
+	
+	var mouseX;
+	var mouseY;
+	
+	
+	var camX = 0;
+	var camY = 0;
+	var camZ = 0;
+	
+	function getRandomStars(numNewStars) {
+		for(var i = 0; i < numNewStars; i++) {
+			var randomZ = Math.random() * 10 + 1
+			var newStarAdded = new pos((Math.random() - 0.5) * 4000 * randomZ, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
+		}
+	}
+	
+	function getStarsAheadOfCam(numNewStars) {
+		for(var i = 0; i < numNewStars; i++) {
+			var randomZ = Math.random() * 10 + 1
+			var newStarAdded = new pos(camX * 3 - canvas.width * 5, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
+		}
+	}
+	
+	
+	function project3D(x, y, z) {
+		ctx.fillStyle = "#FFFFFF";canvas.width
+		ctx.fillRect((camX - x) / z + canvas.width / 2, (camY - y) / z + canvas.height / 2, 2, 2);
+	}
+	
+	function drawBG(){
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+		getStarsAheadOfCam(2)
+		for(var i = 0; i < stars.length; i++) {
+			project3D(stars[i].x, stars[i].y, stars[i].z)
+			
+			//TODO: remove star when x < 0
+		}
+		camX-=10;
+		setTimeout(drawBG, 20);
+	}
+	
+	
+	getRandomStars(1000)
+	drawBG();
+</script>
+
+<style>
+canvas {
+  display: block;
+}
+</style>
