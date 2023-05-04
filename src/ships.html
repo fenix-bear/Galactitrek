@@ -1,3 +1,5 @@
+<!-- for including html files -->
+<script src="./libs/csi.min.js"></script>
 
 <!doctype html>
 <html lang="en">
@@ -18,8 +20,10 @@
   </head>
 
   <body>
-
-    <iframe src="nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe>
+	
+	<div data-include="nav.html"></div>
+	
+    <!-- <iframe  src="nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 	<div id="container" style="position:relative">
@@ -37,15 +41,24 @@
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5 font-weight-light">Speed</h2>
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black">
+        <div class="my-3 py-3 row">
+			<div class="col-sm">
+				
+<h2 class="display-5 font-weight-light">Speed</h2>
 			<p class="lead">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses pattented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.html#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
+			</div>
+			<div class="col-sm">
+				<iframe src="./3D/earth.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+				<label for="planet" class="kindaHidden">Click and drag to pan camera. You can see various locations on the globe.</label>
+			</div>
+			
         </div>
       </div>
     </div>
-
-    <iframe src="footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe>
+	
+	<div data-include="footer.html"></div>
+    <!-- <iframe src="footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe> -->
 
 
     <!-- Bootstrap core JavaScript

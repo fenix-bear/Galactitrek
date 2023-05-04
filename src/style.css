@@ -55,6 +55,9 @@
   background-color: #e5e5e5;
 }
 
+.kindaHidden {
+	color: rgba(255, 255, 255, 0.15);
+}
 
 /*
  * Extra utilities
