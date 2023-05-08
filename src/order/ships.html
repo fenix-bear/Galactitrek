@@ -31,41 +31,44 @@
 		
 	  
     </div>
-
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<ul class="nav nav-tabs">
-		  <li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="mars.html">Mars</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="venus.html">Venus</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="proxima.html">Proxima Centuri System</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="trappist.html">Trappist System</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="sagittarius.html">Sagittarius A</a>
-		  </li>
-		  
-		  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">
-			<div class="my-3 py-3 row" style="width: 100%">
-				<div class="col-sm">
-					<h2 class="display-5 font-weight-light marsColoring">Mars</h2>
-					<p class="lead font-weight-medium">Mars is the 4th planet in our solar system and also perhaps, one of the coolest. Here, you can go skiing on Olympus Mons, the tallest mountain in our solar system or you can go visit one of our great hiking trails there. No matter if you are looking for just a place to <i>chill</i> or just a cheap place for vacation, Mars is one of our best vacation locations.</p>
+	
+	<div class="d-flex">
+		<div class="d-md-flex flex-md-equal my-md-3 pl-md-3" style="width: 100%">
+			<ul class="nav nav-tabs">
+			  <li class="nav-item">
+				<a class="nav-link" aria-current="page" href="overview.html">Overview</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link active" href="ships.html">Choose your Ship</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="destinations.html">Destinations</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" href="payment.html">Payment info</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link disabled" href="confirm.html">Confirm your booking</a>
+			  </li>
+			  
+			  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">
+				<div class="my-3 py-3 row">
+					<div class="col-sm">
+						<h2 class="display-5 font-weight-light">Ships</h2>
+						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.html">ships tab</a> for a more in-depth view.</p>
+					</div>
+					<div class="col-sm">
+						<h2 class="display-5 font-weight-light">Odyssey of the Stars</h2>
+						<iframe src="/3D/biggestShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<button class="btn bg-transparent btn-outline-primary rgb">Book this ship</button>
+					</div>
+					
 				</div>
-				<div class="col-sm" style="text-align: center;">
-					<iframe src="../3D/mars.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-					<label for="planet" class="kindaHidden">Click and drag to pan camera. You can see various locations on the globe.</label>
-				</div>
-				
-			</div>
-		  </div>
-		  
-		</ul>
-    </div>
+			  </div>
+			  
+			</ul>
+		</div>
+	</div>
 
     <div data-include="../footer.html"></div>
 
@@ -88,12 +91,10 @@
 </html>
 
 <style>
-	.drippyBlueToPurple {
-		background-image: linear-gradient(to right, blue, purple); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-	}
 	
-	.marsColoring {
-		background-image: linear-gradient(to right, red, yellow); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+	
+	h2 {
+		color: yellow
 	}
 </style>
 
