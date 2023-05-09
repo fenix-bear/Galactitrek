@@ -1,9 +1,7 @@
-<!-- for including html files -->
-<script src="./libs/csi.min.js"></script>
 
 <!doctype html>
 <html lang="en">
-	<head>
+	<head frameborder="0">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
@@ -18,10 +16,10 @@
 		<link href="/style.css" rel="stylesheet">
 	</head>
 
-	<body>
-		<div style="width: 400px">
+	<body frameborder="0" style="overflow: hidden; text-align: center;">
+		<div style="width: 100%">
 			<h2 style="color: black">Current Price:</h2>
-			<h2 style="color: black" id="price">$232,002</h2>
+			<h2 style="color: black" id="totalPrice">$232,002</h2>
 			
 			<p>Cost analysis:</p>
 			<ul id="costItems">
@@ -31,14 +29,6 @@
 	</body>
 </html>
 
-<script>
-	function updateDisplays() {
-		document.getElementById("ship").innerText = sessionStorage.ship
-	}
-
-	var intervalId = window.setInterval(function () {
-		updateDisplays()
-	}, 5000);
-</script>
+<script src="/priceWidget.js"></script>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
