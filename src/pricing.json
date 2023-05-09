@@ -1,13 +1,16 @@
 {
-	"ships": {
-		"odyssey": {
+	"ships": [
+		{
+			"name": "Odyssey of the Stars",
 			"price": 220
 		},
-		"voyage": {
+		{
+			"name": "Voyage of the Stars",
 			"price": 80
 		},
-		"personal": {
+		{
+			"name": "Personal ship",
 			"price": 2400
 		}
-	}
+	]
 }
