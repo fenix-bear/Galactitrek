@@ -1,13 +1,13 @@
 {
 	"ships": {
 		"odyssey": {
-			"price": 220,
+			"price": 220
 		},
 		"voyage": {
-			"price": 80,
+			"price": 80
 		},
 		"personal": {
-			"price": 2400,
+			"price": 2400
 		}
 	}
 }

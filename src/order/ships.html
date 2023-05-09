@@ -60,7 +60,7 @@
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Odyssey of the Stars</h2>
 						<iframe src="/3D/biggestShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb">Book this ship</button>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addToCart()">Book this ship</button>
 					</div>
 					
 				</div>
@@ -68,6 +68,7 @@
 			  
 			</ul>
 		</div>
+		<div data-include="/currentPriceWidget.html" class="border border-dark""></div>
 	</div>
 
     <div data-include="../footer.html"></div>
@@ -89,6 +90,15 @@
     </script>
   </body>
 </html>
+
+<script>
+	function addToCart() {
+		$.getJSON("pricing.json", function(json) {
+			console.log(json); // this will show the info it in firebug console
+		});
+		sessionStorage.setItem('ship', 'value')
+	}
+</script>
 
 <style>
 	
