@@ -12,5 +12,32 @@
 			"name": "Personal ship",
 			"price": 2400
 		}
+	],
+	"destinations": [
+		{
+			"name": "Mars",
+			"price": 25,
+			"days": 3
+		},
+		{
+			"name": "Venus",
+			"price": 25,
+			"days": 3
+		},
+		{
+			"name": "Alpha/Proxima Centurii system",
+			"price": 125,
+			"days": 7
+		},
+		{
+			"name": "Trappist system",
+			"price": 150,
+			"days": 14
+		},
+		{
+			"name": "Sagittarius A",
+			"price": 250,
+			"days": 30
+		}
 	]
 }

@@ -39,16 +39,16 @@
 				<a class="nav-link" aria-current="page" href="overview.html">Overview</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link active" href="ships.html">Choose your Ship</a>
+				<a class="nav-link" href="ships.html">Choose your Ship</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link" href="ships.html">Room</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="destinations.html">Destinations</a>
+				<a class="nav-link active" href="destinations.html">Destinations</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="payment.html">Payment info</a>
+				<a class="nav-link" href="payment.html">Payment info</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link disabled" href="confirm.html">Confirm your booking</a>
@@ -57,23 +57,19 @@
 			  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Ships</h2>
-						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.html">ships tab</a> for a more in-depth view.</p>
+						<h2 class="display-5 font-weight-light">Destinations</h2>
+						<p class="lead">We offer a large catalouge of destinations on our space ships, you can see more detail on the <a href="/destinations/mars.html">destinations tab</a> for a more in-depth view.</p>
 					</div>
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Odyssey of the Stars</h2>
-						<iframe src="/3D/biggestShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(0)">Book this ship</button>
+						<h2 class="display-5 font-weight-light">Mars</h2>
+						<iframe src="/3D/mars.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addDestinationToCart(0)">Set as destination</button>
 						<br>
 						
-						<h2 class="display-5 font-weight-light" style="color: yellow">Voyage of the Stars</h2>
-						<iframe src="/3D/mediumShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(1)">Book this ship</button>
+						<h2 class="display-5 font-weight-light">Venus</h2>
+						<iframe src="/3D/venus.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addDestinationToCart(1)">Set as destination</button>
 						<br>
-						
-						<h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
-						<iframe src="/3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(2)">Book this ship</button>
 					</div>
 					
 				</div>
@@ -105,7 +101,7 @@
 </html>
 
 <script>
-	function addShipToCart(shipIndex) {
+	function addDestinationToCart(shipIndex) {
 		var pricing;
 		fetch("/pricing.json")
 			.then(response => {
@@ -113,7 +109,12 @@
 			})
 			// for some goofy reason you can only store strings in here
 			// So you have to stringify the json
-			.then(data => sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])));
+			.then(data => {
+			sessionStorage.setItem('days', JSON.stringify(data.destinations[shipIndex].days));
+			sessionStorage.setItem('destination', JSON.stringify(data.destinations[shipIndex]));
+			
+			
+			});
 	}
 </script>
 
