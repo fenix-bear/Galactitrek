@@ -39,13 +39,13 @@
 				<a class="nav-link" aria-current="page" href="overview.html">Overview</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link active" href="ships.html">Choose your Ship</a>
+				<a class="nav-link" href="ships.html">Choose your Ship</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="room.html">Room</a>
+				<a class="nav-link active" href="room.html">Room</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="destinations.html">Destinations</a>
+				<a class="nav-link" href="destinations.html">Destinations</a>
 			  </li>
 			  <li class="nav-item">
 				<a class="nav-link disabled" href="payment.html">Payment info</a>
@@ -57,23 +57,24 @@
 			  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Ships</h2>
-						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.html">ships tab</a> for a more in-depth view.</p>
+						<h2 class="display-5 font-weight-light">Rooms</h2>
+						<p class="lead">Here at Galactitrek, we offer you top-notch rooms in our spaceships. We have a wide array of options for you, from luxurious suites to basic cabins, we've got you covered. Unlike many other cruising companies, we ensure our staff keep your cabin as tidy as possible. Our staff also provide 24/7 service, so you can rest assured that you will be well taken care of.</p>
+						<hr>
+						<h2 class="display-5 font-weight-light">Cozy Suite</h2>
+						<p class="lead">Our Cozy suite is a minimalistic room primarily for solo travelers. It is our cheapest option, $45 a night, and it has a small bed and a shared bathroom amung the hallway.</p>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(2)">Book this ship</button>
+						<br>
 					</div>
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Odyssey of the Stars</h2>
-						<iframe src="/3D/biggestShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<h2 class="display-5 font-weight-light">Executive Suite</h2>
+						<p class="lead">Our executive suite is our most premium accommodation option that we have. For the low price of $1,500 a night, you gain access to your own private crew of staff. This also comes with three bedrooms, two bathrooms, and a 3D pool table. Also, you get a large balcony overlooking the ship.</p>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(0)">Book this ship</button>
-						<br>
+						<hr><br>
 						
-						<h2 class="display-5 font-weight-light" style="color: yellow">Voyage of the Stars</h2>
-						<iframe src="/3D/mediumShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<h2 class="display-5 font-weight-light">Governors Suite</h2>
+						<p class="lead">Our Governors suite is a top-notch suite for large families traveling. For $500 a night you can get a balcony, 1 large bathroom, and two bedrooms, aswell as other ammenities such as a TV and a couch.</p>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(1)">Book this ship</button>
 						<br>
-						
-						<h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
-						<iframe src="/3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(2)">Book this ship</button>
 					</div>
 					
 				</div>
@@ -113,7 +114,7 @@
 			})
 			// for some goofy reason you can only store strings in here
 			// So you have to stringify the json
-			.then(data => sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])));
+			.then(data => sessionStorage.setItem('room', JSON.stringify(data.rooms[shipIndex])));
 	}
 </script>
 

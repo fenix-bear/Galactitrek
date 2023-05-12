@@ -39,5 +39,19 @@
 			"price": 250,
 			"days": 30
 		}
+	],
+	"rooms": [
+		{
+			"name": "Executive Suite",
+			"price": 1500
+		},
+		{
+			"name": "Govenors Suite",
+			"price": 500
+		},
+		{
+			"name": "Cozy Suite",
+			"price": 45
+		}
 	]
 }

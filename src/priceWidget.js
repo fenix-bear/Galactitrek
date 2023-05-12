@@ -5,7 +5,7 @@ function newCostItem(val, otherText, mode) {
 	try {
 		newJson = JSON.parse(val)
 		
-		if(mode == 0) {
+		if(mode == 0 && sessionStorage.days != undefined) {
 			var days = parseFloat(sessionStorage.days)
 			otherText += " ($" + (days * parseFloat(newJson.price)) + ")"
 			price+=(days * parseFloat(newJson.price))
@@ -32,7 +32,13 @@ function clearCostItems() {
 function updateDisplays() {
 	clearCostItems()
 	newCostItem(sessionStorage.ship, " per night", 0);
+	newCostItem(sessionStorage.room, " per night", 0);
 	newCostItem(sessionStorage.destination, " additional per night", 0);
+	
+	if(sessionStorage.days != undefined) {
+		var days = parseFloat(sessionStorage.days)
+		document.getElementById('totalPrice').innerHTML += " for " + days + " days"
+	}
 }
 
 updateDisplays()
