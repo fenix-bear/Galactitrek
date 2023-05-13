@@ -39,10 +39,14 @@
 		}
 	}
 	
-	
+	// Draws point in 3d based of delta position of camx y z
+	// Returns if point is left of camera
 	function project3D(x, y, z) {
 		ctx.fillStyle = "#FFFFFF";
-		ctx.fillRect((camX + (mouseX - canvas.width / 2) / 1 - x) / z + canvas.width / 2, (camY + (mouseY - canvas.width / 2) / 1 - y) / z + canvas.height / 2, 2, 2);
+		var projectedX = (camX + (mouseX - canvas.width / 2) / 1 - x) / z + canvas.width / 2
+		ctx.fillRect(projectedX, (camY + (mouseY - canvas.width / 2) / 1 - y) / z + canvas.height / 2, 2, 2);
+		
+		return projectedX < 0
 	}
 	
 	function drawBG(){
@@ -51,9 +55,9 @@
 		canvas.height = window.innerHeight;
 		getStarsAheadOfCam(2)
 		for(var i = 0; i < stars.length; i++) {
-			project3D(stars[i].x, stars[i].y, stars[i].z)
+			var left = project3D(stars[i].x, stars[i].y, stars[i].z)
 			
-			//TODO: remove star when x < 0
+			// TODO: remove points to left
 		}
 		camX-=10;
 		setTimeout(drawBG, 20);
