@@ -103,7 +103,7 @@
 		document.getElementById("flightInfo").innerHTML = text;
 	}
 	function loadExtraPaths() {
-		var closeLocations = ["Mercury Charging station", "Titan Base", "Ceres dumping station", "Uranus waste desposal", "Jupiter"]
+		var closeLocations = ["Mercury Charging station", "Titan Base", "Ceres dumping station", "Uranus waste disposal", "Jupiter"]
 		var farLocations = ["Sirus A", "Titania base", "Wolf 359-B station", "Barnard's Star", "Gaia BH1"]
 		var text = "Along with your listed location, we will also be going to the following for maintenance purposes:"
 		text+="<ul>"
@@ -127,11 +127,9 @@
 		// TODO:
 	}
 	
-	window.onload = function() {
-	  loadFlightInfo()
-	  loadExtraPaths()
-	  fakeDeductMoney()
-	};
+  loadFlightInfo()
+  loadExtraPaths()
+  fakeDeductMoney()
 </script>
 
 <style>
