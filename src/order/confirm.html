@@ -57,29 +57,13 @@
 			  <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Payment</h2>
-						<p class="lead">We use standardized Earth Credits™ for payment, or if you have a credit card that supports Galactibucks™, you are able to obtain a discount or even get a free cruise,</p>
-						
-						<h2 class="display-5 font-weight-light">Discount code</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" id="discount"></input>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addDestinationToCart(2)">Apply discount</button>
-						<hr>
-
-						<h2 class="display-5 font-weight-light">Earth Credits</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" onload="loadCard()" id="card"></input>
-						<br>
-						<label class="kindaHidden">Note that your card number is automatically put in</label>
+						<h2 class="display-5 font-weight-light">Confirmed!</h2>
+						<p class="lead" id="flightInfo"></p>
 					</div>
 					<div class="col-sm">
-						<h2 class="display-5 font-weight-light">Email</h2>
-						<p class="lead">Recieve data from our newsletter about your next cruise</p>
-						
-						<input class="btn bg-transparent btn-outline-primary rgb"></input>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="submitEmail()">Submit email</button>
+						<h2 class="display-5 font-weight-light">Also..</h2>
+						<p class="lead" id="extraInfo"></p>
 					</div>
-
-					<button class="btn bg-transparent btn-outline-primary rgb" onclick="bookFlight()" style="width: 100%; height: 400px; font-size: 50px">Book your flight!</button>
-					
 				</div>
 			  </div>
 			  
@@ -109,40 +93,44 @@
 </html>
 
 <script>
-	function randomCard() {
-		var availableCharacters = [0, 1, 2, 3, 5, 7, 8, "a", "S", "Q", "EARTH", "GA", "TSA", "-"]
-		var string = ""
-		for(var i = 0; i < 10; i++) {
-			string+=availableCharacters[parseInt(Math.random() * availableCharacters.length)]
+	function loadFlightInfo() {
+		var randomTimes = ["8:30 AM", "11:30 AM", "2:00 PM", "4:30 PM"]
+		var randomDate = ["June 21", "July 1", " July 14", "August 16"]
+		var text = "Congratulations! Your flight is now booked. You will depart from the Miami Spaceport at "
+		text += (randomTimes[Math.floor(Math.random() * randomTimes.length)])
+		text += " on " + (randomDate[Math.floor(Math.random() * randomDate.length)])
+		
+		document.getElementById("flightInfo").innerHTML = text;
+	}
+	function loadExtraPaths() {
+		var closeLocations = ["Mercury Charging station", "Titan Base", "Ceres dumping station", "Uranus waste desposal", "Jupiter"]
+		var farLocations = ["Sirus A", "Titania base", "Wolf 359-B station", "Barnard's Star", "Gaia BH1"]
+		var text = "Along with your listed location, we will also be going to the following for maintenance purposes:"
+		text+="<ul>"
+		for(var i = 0; i < Math.floor(Math.random() * 2 + parseInt(sessionStorage.days / 2)); i++) {
+			text += "<li>"
+			if(i > 3) {
+				var ran = Math.floor(Math.random() * farLocations.length)
+				text += farLocations[ran]
+			} else {
+				var ran = Math.floor(Math.random() * closeLocations.length)
+				text += closeLocations[ran]
+			}
+			text += "</li>"
 		}
-		string+=availableCharacters[parseInt(Math.random() * availableCharacters.length - 1)]
-		return string
-	}
-	function addDestinationToCart(shipIndex) {
-		var pricing;
-		fetch("/pricing.json")
-			.then(response => {
-				return response.json();
-			})
-			// for some goofy reason you can only store strings in here
-			// So you have to stringify the json
-			.then(data => {
-			sessionStorage.setItem('days', JSON.stringify(data.destinations[shipIndex].days));
-			sessionStorage.setItem('destination', JSON.stringify(data.destinations[shipIndex]));
-			
-			
-			});
-	}
-	function submitEmail() {
+		text+="</ul>"
 
+		document.getElementById("extraInfo").innerHTML = text;
 	}
-	
-	function loadCard() {
-		document.getElementById("card").value = randomCard()
+
+	function fakeDeductMoney() {
+		// TODO:
 	}
 	
 	window.onload = function() {
-	  loadCard()
+	  loadFlightInfo()
+	  loadExtraPaths()
+	  fakeDeductMoney()
 	};
 </script>
 
