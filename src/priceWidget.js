@@ -22,6 +22,17 @@ function newCostItem(val, otherText, mode) {
 		
 	}
 }
+function savingsItem(num) {
+	if(num != undefined) {
+		el = document.createElement('li');
+		el.innerHTML = parseFloat(num) * 100 + "% discount"
+		document.getElementById('costItems').appendChild(el);
+		
+		price *= 1 - parseFloat(num)
+		document.getElementById('totalPrice').innerHTML = "$" + price
+	}
+}
+
 
 function clearCostItems() {
 	// Credit: https://stackoverflow.com/questions/10750137/remove-all-li-from-ul
@@ -34,6 +45,7 @@ function updateDisplays() {
 	newCostItem(sessionStorage.ship, " per night", 0);
 	newCostItem(sessionStorage.room, " per night", 0);
 	newCostItem(sessionStorage.destination, " additional per night", 0);
+	savingsItem(sessionStorage.discount);
 	
 	if(sessionStorage.days != undefined) {
 		var days = parseFloat(sessionStorage.days)

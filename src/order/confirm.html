@@ -108,15 +108,24 @@
 		var text = "Along with your listed location, we will also be going to the following for maintenance purposes:"
 		text+="<ul>"
 		for(var i = 0; i < Math.floor(Math.random() * 2 + parseInt(sessionStorage.days / 2) + 1); i++) {
-			text += "<li>"
 			if(i > 3) {
 				var ran = Math.floor(Math.random() * farLocations.length)
-				text += farLocations.splice(ran,ran+1)[0]
+				tmp = farLocations.splice(ran,ran+1)[0]
+				if(tmp != undefined) {
+					text += "<li>"
+					text += tmp
+					text += "</li>"
+				}
 			} else {
 				var ran = Math.floor(Math.random() * closeLocations.length)
-				text += closeLocations.splice(ran,ran+1)[0]
+				var tmp = closeLocations.splice(ran,ran+1)[0]
+				if(tmp != undefined) {
+					text += "<li>"
+					text += tmp
+					text += "</li>"
+				}
 			}
-			text += "</li>"
+			
 		}
 		text+="</ul>"
 

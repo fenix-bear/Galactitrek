@@ -58,15 +58,15 @@
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Payment</h2>
-						<p class="lead">We use standardized Earth Credits™ for payment, or if you have a credit card that supports Galactibucks™, you are able to obtain a discount or even get a free cruise,</p>
+						<p class="lead">We use standardized Earth Credits™ for payment, or if you have a credit card that supports Galactibucks™, you are able to obtain a discount or even get a free cruise. Note that the discounts do not stack.</p>
 						
 						<h2 class="display-5 font-weight-light">Discount code</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" id="discount"></input>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addDestinationToCart(2)">Apply discount</button>
+						<input class="btn bg-transparent btn-outline-primary rgb" id="discountInput" ></input>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="discount(document.getElementById('discountInput').value)">Apply discount</button>
 						<hr>
 
 						<h2 class="display-5 font-weight-light">Earth Credits</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" onload="loadCard()" id="card"></input>
+						<input class="btn bg-transparent btn-outline-primary rgb" onload="loadCard()" id="card" disabled></input>
 						<br>
 						<label class="kindaHidden">Note that your card number is automatically put in</label>
 					</div>
@@ -120,6 +120,18 @@
 		return string
 	}
 	
+	function asciiStringRandom(str) {
+		var num = 0;
+		for(var i = 0; i < str.length; i++) {
+			num += str.charCodeAt(i) * i
+		}
+		return num
+	}
+	
+	function seededRandom(seed) {
+		return Math.sin(asciiStringRandom(seed) * 10000);
+	}
+	
 	function addDestinationToCart(shipIndex) {
 		var pricing;
 		fetch("/pricing.json")
@@ -133,7 +145,20 @@
 			sessionStorage.setItem('destination', JSON.stringify(data.destinations[shipIndex]));
 			
 			
-			};
+			});
+	}
+	
+	function discount(discountText) {
+		var ran = seededRandom(discountText)
+		if(ran < -0.5) {
+			sessionStorage.discount = "0.5"
+		} else if(ran < 0) {
+			sessionStorage.discount = "0.2"
+		} else if(ran < 0.5) {
+			sessionStorage.discount = "0.1"
+		} else {
+			sessionStorage.discount = "0"
+		}
 	}
 	
 	function submitEmail() {
@@ -144,9 +169,7 @@
 		document.getElementById("card").value = randomCard()
 	}
 	
-	window.onload = function() {
-	  loadCard()
-	};
+	loadCard()
 </script>
 
 <style>
