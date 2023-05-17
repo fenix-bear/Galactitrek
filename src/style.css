@@ -11,42 +11,52 @@
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
+
 .site-header a {
   color: #999;
   transition: ease-in-out color .15s;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
 }
 
 .kindaHidden {
-	color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
 }
 
 /*
  * Extra utilities
  */
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
 
-.flex-equal > * {
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal>* {
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
 }
+
 @media (min-width: 768px) {
-  .flex-md-equal > * {
+  .flex-md-equal>* {
     -ms-flex: 1;
     -webkit-box-flex: 1;
     flex: 1;
   }
 }
 
-.gradient2{
+.gradient2 {
   background: url("/gradient2.jpg");
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -54,7 +64,7 @@
   animation: animate-gradient 30s linear infinite;
 }
 
-.gradient1{
+.gradient1 {
   background: url("/gradient1.jpg");
   background-size: 200% auto;
   -webkit-background-clip: text;
@@ -62,8 +72,8 @@
   animation: animate-gradient 30s linear infinite;
 }
 
-.rgb{
-  background: linear-gradient(90deg, rgba(0,219,255,1) 0%, rgba(75,75,255,1) 17%, rgba(184,0,255,1) 34%, rgba(255,0,0,1) 52%, rgba(219,71,218,1) 75%, rgba(0,219,255,1) 100%);
+.rgb {
+  background: linear-gradient(90deg, rgba(0, 219, 255, 1) 0%, rgba(75, 75, 255, 1) 17%, rgba(184, 0, 255, 1) 34%, rgba(255, 0, 0, 1) 52%, rgba(219, 71, 218, 1) 75%, rgba(0, 219, 255, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,21 +81,32 @@
 }
 
 @keyframes animate-gradient {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 .bg-dark {
-	background-color: black;
-	color: blue;
+  background-color: black;
+  color: blue;
 }
 
+#overrideheader .mainheader {
+  margin-top: 1px !important;
+}
 
-.overflow-hidden { overflow: hidden; }
+.overflow-hidden {
+  overflow: hidden;
+}
 
 .mainlogo {
   height: 8vw;
   margin-bottom: 20px;
   position: relative;
+  margin-top: 10vw;
   top: 2px;
 }
