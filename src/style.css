@@ -46,8 +46,16 @@
   }
 }
 
+p {
+  background: linear-gradient(90deg, rgba(222,172,127,1) 0%, rgba(255,247,184,1) 27%, rgba(241,161,173,1) 60%, rgba(222,172,127,1) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 30s linear infinite;
+}
+
 .gradient2{
-  background: url("/gradient2.jpg");
+  background: linear-gradient(90deg, rgba(166,235,215,1) 0%, rgba(199,255,184,1) 27%, rgba(208,179,227,1) 60%, rgba(166,235,215,1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -55,11 +63,27 @@
 }
 
 .gradient1{
-  background: url("/gradient1.jpg");
+  background: linear-gradient(90deg, rgba(222,172,127,1) 0%, rgba(255,247,184,1) 27%, rgba(241,161,173,1) 60%, rgba(222,172,127,1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 30s linear infinite;
+}
+
+p.normal {
+  background-color:rgba(0, 0, 0, 0);
+  color: white;
+}
+
+a.gradient1 {
+  background: linear-gradient(135deg, rgba(235,240,143,1) 0%, rgba(255,205,237,1) 38%, rgba(255,209,184,1) 69%, rgba(235,240,143,1) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+  text-emphasis-color: rgb(157, 247, 157);
+  animation: animate-gradient 5s linear infinite;
 }
 
 
