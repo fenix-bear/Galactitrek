@@ -11,35 +11,45 @@
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
+
 .site-header a {
   color: #999;
   transition: ease-in-out color .15s;
 }
+
 .site-header a:hover {
   color: #fff;
   text-decoration: none;
 }
 
 .kindaHidden {
-	color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.15);
 }
 
 /*
  * Extra utilities
  */
 
-.border-top { border-top: 1px solid #e5e5e5; }
-.border-bottom { border-bottom: 1px solid #e5e5e5; }
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
 
-.flex-equal > * {
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.flex-equal>* {
   -ms-flex: 1;
   -webkit-box-flex: 1;
   flex: 1;
 }
+
 @media (min-width: 768px) {
-  .flex-md-equal > * {
+  .flex-md-equal>* {
     -ms-flex: 1;
     -webkit-box-flex: 1;
     flex: 1;
@@ -47,23 +57,23 @@
 }
 
 p {
-  background: linear-gradient(90deg, rgba(222,172,127,1) 0%, rgba(255,247,184,1) 27%, rgba(241,161,173,1) 60%, rgba(222,172,127,1) 100%);
+  background: linear-gradient(90deg, rgba(222, 172, 127, 1) 0%, rgba(255, 247, 184, 1) 27%, rgba(241, 161, 173, 1) 60%, rgba(222, 172, 127, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 30s linear infinite;
 }
 
-.gradient2{
-  background: linear-gradient(90deg, rgba(166,235,215,1) 0%, rgba(199,255,184,1) 27%, rgba(208,179,227,1) 60%, rgba(166,235,215,1) 100%);
+.gradient2 {
+  background: linear-gradient(90deg, rgba(166, 235, 215, 1) 0%, rgba(199, 255, 184, 1) 27%, rgba(208, 179, 227, 1) 60%, rgba(166, 235, 215, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 30s linear infinite;
 }
 
-.gradient1{
-  background: linear-gradient(90deg, rgba(222,172,127,1) 0%, rgba(255,247,184,1) 27%, rgba(241,161,173,1) 60%, rgba(222,172,127,1) 100%);
+.gradient1 {
+  background: linear-gradient(90deg, rgba(222, 172, 127, 1) 0%, rgba(255, 247, 184, 1) 27%, rgba(241, 161, 173, 1) 60%, rgba(222, 172, 127, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -71,12 +81,12 @@ p {
 }
 
 p.normal {
-  background-color:rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
   color: white;
 }
 
 a.gradient1 {
-  background: linear-gradient(135deg, rgba(235,240,143,1) 0%, rgba(255,205,237,1) 38%, rgba(255,209,184,1) 69%, rgba(235,240,143,1) 100%);
+  background: linear-gradient(135deg, rgba(235, 240, 143, 1) 0%, rgba(255, 205, 237, 1) 38%, rgba(255, 209, 184, 1) 69%, rgba(235, 240, 143, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -88,7 +98,7 @@ a.gradient1 {
 
 
 .rgb {
-  background: linear-gradient(90deg, rgba(177,173,255,1) 0%, rgba(108,108,255,1) 25%, rgba(60,153,246,1) 54%, rgba(177,173,255,1) 100%);
+  background: linear-gradient(90deg, rgba(177, 173, 255, 1) 0%, rgba(108, 108, 255, 1) 25%, rgba(60, 153, 246, 1) 54%, rgba(177, 173, 255, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -96,8 +106,8 @@ a.gradient1 {
   transition: 0.3s;
 }
 
-.rgb:hover{
-  background: linear-gradient(90deg, rgba(0,219,255,1) 0%, rgba(75,75,255,1) 17%, rgba(184,0,255,1) 34%, rgba(255,0,0,1) 52%, rgba(219,71,218,1) 75%, rgba(0,219,255,1) 100%);
+.rgb:hover {
+  background: linear-gradient(90deg, rgba(0, 219, 255, 1) 0%, rgba(75, 75, 255, 1) 17%, rgba(184, 0, 255, 1) 34%, rgba(255, 0, 0, 1) 52%, rgba(219, 71, 218, 1) 75%, rgba(0, 219, 255, 1) 100%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -105,8 +115,13 @@ a.gradient1 {
 }
 
 @keyframes animate-gradient {
-  0% { background-position: 0% center; }
-  100% { background-position: 200% center; }
+  0% {
+    background-position: 0% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
 }
 
 h2 {
@@ -114,12 +129,28 @@ h2 {
 }
 
 .mainContent {
-  background: linear-gradient(135deg, rgba(25,0,15,1) 0%, rgba(5,0,14,1) 100%);
+  background: linear-gradient(135deg, rgba(25, 0, 15, 1) 0%, rgba(5, 0, 14, 1) 100%);
 }
 
-.overflow-hidden { overflow: hidden; }
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@keyframes minimizelogo {
+  from {
+    height: 8vw;
+    color: "#ffcc00"
+  }
+
+  to {
+    height: 20px;
+    color: "#ffffff"
+  }
+}
 
 .mainlogo {
+  animation-name: minimizelogo;
+  animation-duration: 1s;
   height: 8vw;
   margin-bottom: 20px;
   position: relative;
