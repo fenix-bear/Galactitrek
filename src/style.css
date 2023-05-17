@@ -82,3 +82,10 @@
 
 
 .overflow-hidden { overflow: hidden; }
+
+.mainlogo {
+  height: 8vw;
+  margin-bottom: 20px;
+  position: relative;
+  top: 2px;
+}
