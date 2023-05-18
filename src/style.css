@@ -136,21 +136,20 @@ h2 {
   overflow: hidden;
 }
 
-@keyframes minimizelogo {
-  from {
-    height: 8vw;
-    color: "#ffcc00"
+@keyframes minimizelogo{
+  0% {
+    opacity: 1;
   }
-
-  to {
-    height: 20px;
-    color: "#ffffff"
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 .mainlogo {
-  animation-name: minimizelogo;
-  animation-duration: 1s;
+  animation: minimizelogo 1s infinite;
   height: 8vw;
   margin-bottom: 20px;
   position: relative;
