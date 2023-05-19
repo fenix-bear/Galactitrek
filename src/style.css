@@ -129,7 +129,8 @@ h2 {
 }
 
 .mainContent {
-  background: linear-gradient(135deg, rgba(25, 0, 15, 1) 0%, rgba(5, 0, 14, 1) 100%);
+  background: linear-gradient(135deg, rgba(25, 0, 15, 0.8) 0%, rgba(5, 0, 14, 0.8) 100%);
+  /* TODO: Maybe slight blur? */
 }
 
 .overflow-hidden {
