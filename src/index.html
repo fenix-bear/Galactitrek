@@ -29,10 +29,20 @@
 
   <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
     <div id="container" style="position:relative">
-      <div id="container" style="position:relative; top:0px; margin-top:0px">
-        <iframe src="starsAutoMove.html" seamless width="100%" frameborder="0" height="300px"
-          style="position:absolute; top:0; left:0; margin-top:0px"></iframe>
-      </div>
+      <iframe src="/starsAutoMove.html" style="
+          position: fixed;
+          top: 0px;
+          bottom: 0px;
+          right: 0px;
+          width: 100%;
+          border: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          z-index: 0;
+          height: 100%;
+        ">
+      </iframe>
 
       <div id="overrideheader" class="mainheader col-md-5 p-lg-5 mx-auto my-5"
         style="max-width: 100%; margin-top:0px!important">
