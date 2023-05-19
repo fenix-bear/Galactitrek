@@ -59,6 +59,10 @@
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Ships</h2>
 						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.html" class="gradient1">ships tab</a> for a more in-depth view.</p>
+						
+						<h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
+						<iframe src="/3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
+						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(2)">Book this ship</button>
 					</div>
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Odyssey of the Stars</h2>
@@ -70,10 +74,6 @@
 						<iframe src="/3D/mediumShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(1)">Book this ship</button>
 						<br>
-						
-						<h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
-						<iframe src="/3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addShipToCart(2)">Book this ship</button>
 					</div>
 					
 				</div>
@@ -113,7 +113,7 @@
 			})
 			// for some goofy reason you can only store strings in here
 			// So you have to stringify the json
-			.then(data => sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])));
+			.then(data => {sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])); window.location.replace("./room.html");});
 	}
 </script>
 

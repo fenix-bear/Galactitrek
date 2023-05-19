@@ -112,7 +112,7 @@
 			})
 			// for some goofy reason you can only store strings in here
 			// So you have to stringify the json
-			.then(data => sessionStorage.setItem('room', JSON.stringify(data.rooms[shipIndex])));
+			.then(data => {sessionStorage.setItem('room', JSON.stringify(data.rooms[shipIndex])); window.location.replace("./destinations.html");});
 	}
 </script>
 

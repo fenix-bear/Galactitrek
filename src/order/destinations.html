@@ -125,7 +125,7 @@
 			.then(data => {
 			sessionStorage.setItem('days', JSON.stringify(data.destinations[shipIndex].days));
 			sessionStorage.setItem('destination', JSON.stringify(data.destinations[shipIndex]));
-			
+			window.location.replace("./payment.html");
 			
 			});
 	}
