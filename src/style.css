@@ -81,8 +81,10 @@ p {
 }
 
 p.normal {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 54%, rgba(255, 255, 255, 1) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a.gradient1 {

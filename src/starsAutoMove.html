@@ -57,7 +57,10 @@
 		for(var i = 0; i < stars.length; i++) {
 			var left = project3D(stars[i].x, stars[i].y, stars[i].z)
 			
-			// TODO: remove points to left
+			if(left) {
+				stars.splice(i, 1);
+				i--;
+			}
 		}
 		camX-=10;
 		camY = document.documentElement.scrollTop;
