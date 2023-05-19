@@ -12,7 +12,5 @@ const observer = new IntersectionObserver((entries) => {
   })
 });
 
-console.log(navlogo);
-
 const hiddenElements = document.querySelectorAll(".mainlogo");
 hiddenElements.forEach((el) => observer.observe(el));
