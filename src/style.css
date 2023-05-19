@@ -136,23 +136,33 @@ h2 {
   overflow: hidden;
 }
 
-@keyframes minimizelogo{
+@keyframes minimizelogo {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
 
 .mainlogo {
-  animation: minimizelogo 1s infinite;
   height: 8vw;
   margin-bottom: 20px;
   position: relative;
   margin-top: 10vw;
   top: 2px;
+}
+
+.logohidden {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.logovisible {
+  opacity: 1;
 }
