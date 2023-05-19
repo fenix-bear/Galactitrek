@@ -129,7 +129,7 @@
 	}
 	
 	function seededRandom(seed) {
-		return Math.sin(asciiStringRandom(seed) * 10000);
+		return Math.sin(Math.tan(asciiStringRandom(seed) * 10000));
 	}
 	
 	function addDestinationToCart(shipIndex) {
@@ -151,18 +151,18 @@
 	function discount(discountText) {
 		var ran = seededRandom(discountText)
 		if(ran < -0.5) {
-			sessionStorage.discount = "0.5"
+			sessionStorage.discount = "0.17"
 		} else if(ran < 0) {
-			sessionStorage.discount = "0.2"
+			sessionStorage.discount = "0.13"
 		} else if(ran < 0.5) {
-			sessionStorage.discount = "0.1"
+			sessionStorage.discount = "0.01"
 		} else {
 			sessionStorage.discount = "0"
 		}
 	}
 	
 	function submitEmail() {
-		alert("Your flight has been booked");
+		
 	}
 	
 	function loadCard() {
