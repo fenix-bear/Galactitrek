@@ -44,8 +44,7 @@
         ">
       </iframe>
 
-      <div id="overrideheader" class="mainheader col-md-5 p-lg-5 mx-auto my-5"
-        style="max-width: 100%; margin-top:0px!important">
+      <div id="overrideheader" class="mainheader col-md-5 p-lg-5 mx-auto my-5 align-middle" style="max-width: 100%; margin-top:0px!important; bottom: 40px;">
         
         <svg id="mainlogo" viewBox="0 0 22.48535 2.25425" offsetWidth="22.48535" offsetHeight="2.25425" version="1.1"
           id="svg5" class="mainlogo" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -90,8 +89,59 @@
           </g>
         </svg>
         <script defer src="/logo.js"></script>
-        <p class="lead font-weight-light normal">The universe at your fingertips.</p>
+        <p class="lead font-weight-light normal" id="slogan">The universe at your fingertips.</p>
         <a class="btn btn-outline-secondary" href="/order/overview.html">Book your flight</a>
+		
+		<script>
+			// This script types out different slogans
+			var slogans=["The universe at your fingertips.", "The universe, right where you need it!", "Be anywhere, anytime.", "The universe?"]
+			var targetSloganIndex = 1;
+			var targetSlogan = slogans[targetSloganIndex];
+			var sloganElement = document.getElementById("slogan")
+			var isAdding = false;
+			var waitTicks = 10;
+			
+			function getSloganText() {
+				return sloganElement.innerHTML;
+			}
+			
+			function addString(str) {
+				sloganElement.innerHTML = getSloganText() + str;
+			}
+			
+			function removeLetter() {
+				sloganElement.innerHTML = getSloganText().slice(0, -1)
+			}
+			
+			function sloganLogic() {
+				if(waitTicks <= 0) {
+					if(isAdding) {
+						if(getSloganText() == targetSlogan) {
+							isAdding = false;
+							targetSloganIndex = (targetSloganIndex + 1) % slogans.length
+							targetSlogan = slogans[targetSloganIndex]
+							waitTicks = 50
+						} else {
+							addString(targetSlogan.slice(getSloganText().length, getSloganText().length + 1))
+						}
+					} else {
+						if(getSloganText() == targetSlogan.slice(0, getSloganText().length)) {
+							console.log(getSloganText())
+							isAdding = true;
+							waitTicks = 10
+						} else {
+							removeLetter()
+						}
+					}
+				}
+				waitTicks--;
+			}
+			
+			const interval = setInterval(function() {
+			   sloganLogic();
+			}, 50);
+		</script>
+		
       </div>
 
     </div>
