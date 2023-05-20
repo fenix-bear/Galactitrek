@@ -5,7 +5,8 @@
         <div>
           <h2 class="display-5 font-weight-light">About</h2>
           <p class="lead font-weight-medium">This website was created for the 2023 National Technology Student
-            Association Webmaster competition.</p>
+            Association Webmaster competition by the Campbell County Highschool Chapter (#0000), consisting of Nathan Mills, Bjoern Petersen, and Nathan Feiler.</p>
+          <p class="lead font-weight-medium"><a href="/worklog.png" class="gradient1">Plan of Work Log</a> | <a href="/copyrightchecklist.png" class="gradient1">Student Copyright Checklist</a></p>
           <h2 class="display-5 font-weight-light">Sources</h2>
           <p class="lead font-weight-medium">This website uses the Bootstrap web framework and the three.js JavaScript
             library for displaying 3d graphics.</p>
@@ -18,8 +19,6 @@
               href="https://www.simplerockets.com/" class="gradient1">Juno New Orgins's</a> built in planet creator
             and we extracted the textures from there. For unchanged planets, Earth and Venus, we used <a
               href="https://www.solarsystemscope.com/textures/" class="gradient1">this website</a>.</p>
-            <h2 class="display-5 font-weight-light">Created by Campbell County High School WebMaster Team</h2>
-            <p class="lead font-weight-medium">Team consists of Nathan Mills, Bjoern Peterson and Nathan Feiler</p>
 
           <h2 class="display-5 font-weight-light"></h2>
         </div>
