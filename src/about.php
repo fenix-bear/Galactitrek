@@ -19,7 +19,6 @@
               href="https://www.simplerockets.com/" class="gradient1">Juno New Orgins's</a> built in planet creator
             and we extracted the textures from there. For unchanged planets, Earth and Venus, we used <a
               href="https://www.solarsystemscope.com/textures/" class="gradient1">this website</a>.</p>
-
           <h2 class="display-5 font-weight-light"></h2>
         </div>
         <div class="col-sm">
