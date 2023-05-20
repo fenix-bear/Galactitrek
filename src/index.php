@@ -48,7 +48,7 @@
   
   <script>
     // This script types out different slogans
-    var slogans=["The universe at your fingertips.", "The universe, right where you need it!", "Be anywhere, anytime.", "The universe?"]
+    var slogans=["The universe at your fingertips.", "The universe, right where you need it!", "Be anywhere, anytime.", "The universe?", "The universe!"]
     var targetSloganIndex = 1;
     var targetSlogan = slogans[targetSloganIndex];
     var sloganElement = document.getElementById("slogan")

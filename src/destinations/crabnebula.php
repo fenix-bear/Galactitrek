@@ -26,13 +26,16 @@
                     <div class="col-sm">
                         <h2 class="display-5 font-weight-light proximaColoring">Crab Nebula Supernova</h2>
                         <p class="lead font-weight-medium">Located 6,523 light years light-years away from our own solar
-                            system, Crab Nebula is a supernova remnant and pulsar wind Nebula.</p>
+                            system, the Crab Nebula is a supernova remnant and pulsar wind Nebula.</p>
                         <hr>
-                        <h2 class="display-5 font-weight-light proximaColoring">Crab Nebula</h2>
-                        <iframe src="../3D/europa.html" seamless width="100%" frameborder="0" height="500px"
-                            id="planet"></iframe>
 
                     </div>
+
+                    <div class="col-sm">
+                        <h2 class="display-5 font-weight-light proximaColoring">Crab Nebula</h2>
+                        <iframe src="../3D/crabNebula.html" seamless width="100%" frameborder="0" height="500px"
+                            id="planet"></iframe>
+				    </div>
                 </div>
             </div>
 
@@ -43,7 +46,7 @@ include "../parent.php"; ?>
 
 <style>
     .proximaColoring {
-        background-image: linear-gradient(to right, yellow, red);
+        background-image: linear-gradient(to right, pink, red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
