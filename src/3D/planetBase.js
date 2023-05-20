@@ -46,6 +46,17 @@ function newPlanet(planetTexture, cloudTexture, locations) {
 		mesh.add( sprite );
 	}
 	
+	function newGlow() {
+		const map = new THREE.TextureLoader().load( "/3D/planetGlow.png");
+		const material2 = new THREE.SpriteMaterial( { map: map } );
+		const sprite = new THREE.Sprite( material2 );
+		sprite.scale.set( 6, 6, 1 );
+		sprite.position.x = 0;
+		sprite.position.y = 0;
+		sprite.position.z = 0;
+		mesh.add( sprite );
+	}
+	
 	const parent = document.querySelector('script[src="/3D/planetBase.js"]').parentNode;
 	const scene = new THREE.Scene();
 	const camera = new THREE.PerspectiveCamera( 75, parent.clientWidth / parent.clientHeight, 0.1, 1000 );
@@ -66,6 +77,7 @@ function newPlanet(planetTexture, cloudTexture, locations) {
 	var material = new THREE.MeshBasicMaterial( { map: texture } );
 	mesh = new THREE.Mesh( geometry, material );
 	
+	newGlow()
 	for(var i = 0; i < locations.length; i++) {
 		newLabel(locations[i])
 	}

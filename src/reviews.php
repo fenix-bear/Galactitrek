@@ -65,5 +65,21 @@
       </div>
     </div>
   </div>
+  
+  <style>
+	.review {
+		background:  linear-gradient(90deg, rgba(11,9,29,1) 0%, rgba(0,20,36,1) 100%);
+		padding: 15px;
+	}
+	.invertedIcon {
+		filter: invert(1);
+		height: 2em;
+	}
+	  .drippyBlueToPurple {
+		background-image: linear-gradient(to right, blue, purple);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	</style>
 <?php $content = ob_get_clean();
 include "parent.php"; ?>

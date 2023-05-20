@@ -131,9 +131,9 @@
             further to the extremely wealthy people, which leads us to today where we are the leading space tourism
             company in the world, with SpaceX in a close second place.</p>
         </div>
-        <div class="col-sm align-items-center justify-content-center">
-          <div style="min-height:500px;max-width:500px;">
-            <?php include ("3D/earth.html");?>
+        <div class="col-sm align-items-center justify-content-center" style="text-align: center">
+          <div style="min-height:500px;width: 100%">
+            <?php include ("./3D/earth.html");?>
           </div>
           <label for="planet" class="kindaHidden text-left" style="text-align: center!important;">Click and drag to pan camera.</label>
         </div>

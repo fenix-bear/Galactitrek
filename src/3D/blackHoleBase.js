@@ -45,6 +45,17 @@ function newPlanet(planetTexture, locations) {
 		mesh.add( sprite );
 	}
 	
+	function newGlow() {
+		const map = new THREE.TextureLoader().load( "/3D/blackHoleGrad.png");
+		const material2 = new THREE.SpriteMaterial( { map: map } );
+		const sprite = new THREE.Sprite( material2 );
+		sprite.scale.set( 7.5, 7.5, 1 );
+		sprite.position.x = 0;
+		sprite.position.y = 0;
+		sprite.position.z = 0;
+		mesh.add( sprite );
+	}
+	
 	const scene = new THREE.Scene();
 	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 	
@@ -63,18 +74,10 @@ function newPlanet(planetTexture, locations) {
 		newLabel(locations[i])
 	}
 	
+	newGlow()
 	
 	scene.add( mesh );
 	
-	
-	// clouds
-	
-	var texture2 = new THREE.TextureLoader().load( "cloudsLessOpaque.png" );;
-	var geometry2 = new THREE.SphereGeometry( 2.01 );
-	var material2 = new THREE.MeshBasicMaterial( { map: texture2 } );
-	material2.transparent = true;
-	mesh2 = new THREE.Mesh( geometry2, material2 );
-	//scene.add(mesh2)
 	
 	camera.position.z = 5;
 
@@ -90,9 +93,6 @@ function newPlanet(planetTexture, locations) {
 		mesh.rotation.y = rotation + (deltaMX + movedX) / 200;
 		rotation -= 0.005
 		mesh.rotation.x = (deltaMY + movedY) / 200
-		
-		mesh2.rotation.x = (deltaMY + movedY) / 200 
-		mesh2.rotation.y = rotation / 5 + (deltaMX + movedX) / 200;
 		
 		//controls.update();
 
