@@ -35,11 +35,9 @@
       </div>
       <br>
       
-      <i class="bi bi-quote"><img src="/quote.svg" class="invertedIcon"></img>Overall, just great. The only issue is that it can sometimes be packed in certain areas so make sure you reserve a seat where needed.<img src="/quote.svg" class="invertedIcon" style="transform: rotate(180deg);"></img></i>
+      <i class="bi bi-quote"><img src="/quote.svg" class="invertedIcon"></img>Amazing, just great, the only complaint I have was that I was on the Challenger<sup>2</sup> ship, but they had great safety precautions, sure I may have a few bruises and scars but it was well worth the money<img src="/quote.svg" class="invertedIcon" style="transform: rotate(180deg);"></img></i>
       <p class="normal">Anonymous - December 3, 2642</p>
     </div>
-    
-    
         </div>
         <div class="col-sm align-items-center justify-content-center">
           <iframe src="/3D/reviews.html" seamless width="100%" frameborder="0" height="500px" id="planet"
