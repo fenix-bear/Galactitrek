@@ -19,7 +19,7 @@
             and we extracted the textures from there. For unchanged planets, Earth and Venus, we used <a
               href="https://www.solarsystemscope.com/textures/" class="gradient1">this website</a>.</p>
             <h2 class="display-5 font-weight-light">Created by Campbell County High School WebMaster Team</h2>
-            <p class="lead font-weight-medium">Team consists of Nathan Mills, Bjoern Peterson and Nathan Feiler</p>
+            <p class="lead font-weight-medium">Team consists of Nathan Mills, Bjoern Petersen and Nathan Feiler</p>
 
           <h2 class="display-5 font-weight-light"></h2>
         </div>
