@@ -14,7 +14,7 @@
                     <h4 class="display-5 font-weight-light">Where can I book a trip with Galactitrek?</h4>
                     <p class ="lead font-weight-medium"><a href="/order/overview.php" class="gradient1">Right Here</a></p>  
                     <h4 class="display-5 font-weight-light">What happens in the case of an emergency?</h4>
-                    <p class ="lead font-weight-medium">During an emergency, such as unexpected reentry into the atmosphere, passengers will be ordered to lock their balcony door and inside doors. Passengers will be alerted every step along the way during an emergancy by the intercoms. In the event of crashing on an alien planet and our ship surviving, passengers will be only allowed to stay in their rooms and will be delivered supplies by their door.</p>  
+                    <p class ="lead font-weight-medium">In the case of emergency we have special protocol that we must follow, however we cannot disclose it now due to security reasons.</p>  
                     <h2 class="display-5 font-weight-light"></h2>
                 </div>
                 <div class="col-sm">

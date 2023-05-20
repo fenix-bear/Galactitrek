@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
+  <title>Galactitrek</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" href="/favicon.ico">
 
-  <title>Galactitrek</title>
+  
   <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/monodeco" type="text/css"/>
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
