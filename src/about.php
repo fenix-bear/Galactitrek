@@ -1,6 +1,3 @@
-<!-- for including html files -->
-<script src="./libs/csi.min.js"></script>
-
 <!doctype html>
 <html lang="en">
 
@@ -22,7 +19,7 @@
 
 <body>
 
-  <div data-include="/nav.html"></div>
+  <?php include ("nav.html"); ?>
 
   <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 
@@ -55,7 +52,7 @@
       </div>
     </div>
 
-    <div data-include="footer.html"></div>
+    <?php include ("footer.html"); ?>
     <!-- <iframe src="footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe> -->
 
 

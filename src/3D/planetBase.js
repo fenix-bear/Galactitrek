@@ -46,15 +46,21 @@ function newPlanet(planetTexture, cloudTexture, locations) {
 		mesh.add( sprite );
 	}
 	
+	const parent = document.querySelector('script[src="/3D/planetBase.js"]').parentNode;
 	const scene = new THREE.Scene();
-	const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	const camera = new THREE.PerspectiveCamera( 75, parent.clientWidth / parent.clientHeight, 0.1, 1000 );
 	
-	onmousemove = function(e){mouseX = e.clientX; mouseY = e.clientY}
+	onmousemove = function(e){mouseX = e.clientX; mouseY = e.clientY};
 
 	const renderer = new THREE.WebGLRenderer( { alpha: true } );
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	document.body.appendChild( renderer.domElement );
-	
+	parent.appendChild( renderer.domElement );
+
+	function resizeRenderer() {
+		renderer.setSize( parent.clientWidth, parent.clientHeight );
+	}	
+	window.addEventListener('resize', resizeRenderer);
+	resizeRenderer();
+
 	var texture = new THREE.TextureLoader().load( planetTexture );;
 	var geometry = new THREE.SphereGeometry( 2 );
 	var material = new THREE.MeshBasicMaterial( { map: texture } );
@@ -105,7 +111,7 @@ function newPlanet(planetTexture, cloudTexture, locations) {
 	
 	// Mouse detection source: https://stackoverflow.com/questions/322378/javascript-check-if-mouse-button-down
 	
-	document.body.onmousedown = function() { 
+	parent.onmousedown = function() { 
 		mouseDown = true;
 		startX = mouseX;
 		startY = mouseY	

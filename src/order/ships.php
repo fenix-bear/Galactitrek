@@ -24,7 +24,7 @@
   <body>
 
     <!-- <iframe src="../nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
-	<div data-include="/nav.html"></div>
+	<?php include ("../nav.html"); ?>
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 	<div id="container" style="position:relative">
@@ -36,29 +36,29 @@
 		<div class="d-md-flex flex-md-equal my-md-3 pl-md-3" style="width: 100%">
 			<ul class="nav nav-tabs">
 			  <li class="nav-item">
-				<a class="nav-link" aria-current="page" href="overview.html">Overview</a>
+				<a class="nav-link" aria-current="page" href="overview.php">Overview</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link active" href="ships.html">Choose your Ship</a>
+				<a class="nav-link active" href="ships.php">Choose your Ship</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="room.html">Room</a>
+				<a class="nav-link" href="room.php">Room</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="destinations.html">Destinations</a>
+				<a class="nav-link disabled" href="destinations.php">Destinations</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="payment.html">Payment info</a>
+				<a class="nav-link disabled" href="payment.php">Payment info</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link disabled" href="confirm.html">Confirm your booking</a>
+				<a class="nav-link disabled" href="confirm.php">Confirm your booking</a>
 			  </li>
 			  
 			  <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="width: 100%">
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Ships</h2>
-						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.html" class="gradient1">ships tab</a> for a more in-depth view.</p>
+						<p class="lead">Before booking one of our ships, you may want to see the <a href="/ships.php" class="gradient1">ships tab</a> for a more in-depth view.</p>
 						
 						<h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
 						<iframe src="/3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
@@ -113,7 +113,7 @@
 			})
 			// for some goofy reason you can only store strings in here
 			// So you have to stringify the json
-			.then(data => {sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])); window.location.replace("./room.html");});
+			.then(data => {sessionStorage.setItem('ship', JSON.stringify(data.ships[shipIndex])); window.location.replace("./room.php");});
 	}
 </script>
 

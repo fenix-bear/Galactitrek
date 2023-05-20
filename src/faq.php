@@ -22,7 +22,7 @@
 
 <body>
 
-    <div data-include="/nav.html"></div>
+    <?php include ("nav.html"); ?>
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 
@@ -39,7 +39,7 @@
                         <h4 class="display-5 font-weight-light">What is this Ultra Fast High Speed Travel Technology ?</h4>
                         <p class="lead font-weight-medium">This Ultra Fast High Speed Travel Technology (U.F.H.S.T.T For short) is our custom one and only hyper-speed travel technology that allows us to traverse galaxies at no time at all. Competing companies such as AstroTours do not have this technology which causes you to pay more for less time spent in these exotic locations. Just another reason you should book with Galactitrek&trade;!</p>
                         <h4 class="display-5 font-weight-light">Where can I book a trip with Galactitrek?</h4>
-                        <p class ="lead font-weight-medium"><a href="/order/overview.html" class="gradient1">Right Here</a></p>  
+                        <p class ="lead font-weight-medium"><a href="/order/overview.php" class="gradient1">Right Here</a></p>  
                         <h4 class="display-5 font-weight-light">What happens in the case of an emergency?</h4>
                         <p class ="lead font-weight-medium">During an emergency, such as unexpected reentry into the atmosphere, passengers will be ordered to lock their balcony door and inside doors. Passengers will be alerted every step along the way during an emergancy by the intercoms. In the event of crashing on an alien planet and our ship surviving, passengers will be only allowed to stay in their rooms and will be delivered supplies by their door.</p>  
                         <h2 class="display-5 font-weight-light"></h2>
@@ -51,7 +51,7 @@
             </div>
         </div>
 
-        <div data-include="footer.html"></div>
+        <?php include ("footer.html"); ?>
         <!--<iframe src="/footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe>-->
 
 

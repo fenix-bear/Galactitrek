@@ -24,7 +24,7 @@
   <body>
 
     <!-- <iframe src="../nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
-	<div data-include="../nav.html"></div>
+	<?php include("../nav.html");?>
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 	<div id="container" style="position:relative">
@@ -35,22 +35,22 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 		<ul class="nav nav-tabs">
 		  <li class="nav-item">
-			<a class="nav-link" aria-current="page" href="mars.html">Mars</a>
+			<a class="nav-link" aria-current="page" href="mars.php">Mars</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link active" href="venus.html">Venus</a>
+			<a class="nav-link active" href="venus.php">Venus</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="proxima.html">Proxima Centuri System</a>
+			<a class="nav-link" href="proxima.php">Proxima Centuri System</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="trappist.html">Trappist System</a>
+			<a class="nav-link" href="trappist.php">Trappist System</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="sagittarius.html">Sagittarius A*</a>
+			<a class="nav-link" href="sagittarius.php">Sagittarius A*</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="crabnebula.html">Crab Nebula</a>
+			<a class="nav-link" href="crabnebula.php">Crab Nebula</a>
 		  </li>
 		  
 		  <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">

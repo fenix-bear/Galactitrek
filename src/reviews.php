@@ -23,7 +23,7 @@
 
 <body style="font-family: 'Monodeco';">
 
-  <div data-include="/nav.html"></div>
+  <?php include ("nav.html"); ?>
 
   <!-- <iframe  src="nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
 
@@ -113,7 +113,7 @@
       </div>
     </div>
 
-    <div data-include="footer.html"></div>
+    <?php include ("footer.html"); ?>
     <!-- <iframe src="footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe> -->
 
 

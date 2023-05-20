@@ -1,5 +1,12 @@
-<body style="margin: 0px">
-<div id="canvasContainer" style="position: relative;">
+<body>
+<div id="canvasContainer" style="position: relative;
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+z-index: -1;
+"">
 <canvas id="body" width="calc(100% - 100px)" height="100%" style="background-color: black; padding: 0; margin: 0; "></canvas>
 </div>
 </body>
@@ -63,8 +70,7 @@
 			}
 		}
 		camX-=10;
-		camY = document.documentElement.scrollTop;
-		//console.log(document.body.scrollTop);
+		camY = -window.scrollY;
 		setTimeout(drawBG, 20);
 	}
 	

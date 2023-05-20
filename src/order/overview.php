@@ -22,9 +22,7 @@
   </head>
 
   <body>
-
-    <!-- <iframe src="../nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
-	<div data-include="/nav.html"></div>
+	<?php include ("../nav.html"); ?>
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 	<div id="container" style="position:relative">
@@ -35,19 +33,19 @@
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 		<ul class="nav nav-tabs">
 		  <li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="overview.html">Overview</a>
+			<a class="nav-link active" aria-current="page" href="overview.php">Overview</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="ships.html">Choose your Ship</a>
+			<a class="nav-link" href="ships.php">Choose your Ship</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link disabled" href="destinations.html">Destinations</a>
+			<a class="nav-link disabled" href="destinations.php">Destinations</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link disabled" href="payment.html">Payment info</a>
+			<a class="nav-link disabled" href="payment.php">Payment info</a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link disabled" href="confirm.html">Confirm your booking</a>
+			<a class="nav-link disabled" href="confirm.php">Confirm your booking</a>
 		  </li>
 		  
 		  <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black">
@@ -56,9 +54,9 @@
 					<h2 class="display-5 font-weight-light">Training</h2>
 					<p class="lead font-weight-medium">Unlike other cruising companies, we require very minimal training for those people boarding our public ships. Those people will go to the theater on the ship the first day to be shown what to do in the case of an emergancy. People flying their own private ship will need to have a pilots liscence or go through our free 30 day pilot training.</p>
 					<h2 class="display-5 font-weight-light">Choosing your ship</h2>
-					<p class="lead font-weight-medium gradient2">The first step in the booking process is to choose the ship that you want to travel in. Galactitrek offers a variety of ships, ranging from smaller vessels for shorter trips to larger, more luxurious ships for longer journeys. Each ship has its own unique features and amenities, so take the time to review the options and select the one that best fits your needs. If you haven't already, navigate to the <a class="gradient1" href="/ships.html">ships tab here</a> to get more details on the vessels we offer.</p>
+					<p class="lead font-weight-medium gradient2">The first step in the booking process is to choose the ship that you want to travel in. Galactitrek offers a variety of ships, ranging from smaller vessels for shorter trips to larger, more luxurious ships for longer journeys. Each ship has its own unique features and amenities, so take the time to review the options and select the one that best fits your needs. If you haven't already, navigate to the <a class="gradient1" href="/ships.php">ships tab here</a> to get more details on the vessels we offer.</p>
 					<h2 class="display-5 font-weight-light">Selecting your destination</h2>
-					<p class="lead font-weight-medium gradient2">Once you've chosen your ship, you'll need to select your <a class="gradient1" href="/destinations/mars.html">destinations</a>. Galactitrek offers a variety of destinations, from nearby planets within our own solar system to distant stars in our galaxy. Consider factors like distance, travel time, and the availability of interesting sights and experiences when selecting your destination. Planets like Mars and Venus will always be our cheapest options and is most likely to be included in our flight plan.</p>
+					<p class="lead font-weight-medium gradient2">Once you've chosen your ship, you'll need to select your <a class="gradient1" href="/destinations/mars.php">destinations</a>. Galactitrek offers a variety of destinations, from nearby planets within our own solar system to distant stars in our galaxy. Consider factors like distance, travel time, and the availability of interesting sights and experiences when selecting your destination. Planets like Mars and Venus will always be our cheapest options and is most likely to be included in our flight plan.</p>
 					<h2 class="display-5 font-weight-light">Pricing</h2>
 					<p class="lead font-weight-medium">Pricing is going to vary from ship to ship and location to location. Generally, the farther away a celestial body is away from earth, the more expensive it would be and ships with less people per capita cost more. See our <a class="gradient1" href="/pricing.html">pricing</a> for more information</p>
 					<h2 class="display-5 font-weight-light">Excursions</h2>

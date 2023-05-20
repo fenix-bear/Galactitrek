@@ -24,7 +24,7 @@
   <body>
 
     <!-- <iframe src="../nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
-	<div data-include="/nav.html"></div>
+	<?php include ("../nav.html"); ?>
 
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
 	<div id="container" style="position:relative">
@@ -36,22 +36,22 @@
 		<div class="d-md-flex flex-md-equal my-md-3 pl-md-3" style="width: 100%">
 			<ul class="nav nav-tabs">
 			  <li class="nav-item">
-				<a class="nav-link" aria-current="page" href="overview.html">Overview</a>
+				<a class="nav-link" aria-current="page" href="overview.php">Overview</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="ships.html">Choose your Ship</a>
+				<a class="nav-link" href="ships.php">Choose your Ship</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="room.html">Room</a>
+				<a class="nav-link" href="room.php">Room</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="destinations.html">Destinations</a>
+				<a class="nav-link" href="destinations.php">Destinations</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link " href="payment.html">Payment info</a>
+				<a class="nav-link " href="payment.php">Payment info</a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link active" href="confirm.html">Confirm your booking</a>
+				<a class="nav-link active" href="confirm.php">Confirm your booking</a>
 			  </li>
 			  
 			  <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black; width: 100%">

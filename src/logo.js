@@ -15,6 +15,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll(".mainlogo");
 hiddenElements.forEach((el) => observer.observe(el));
 
-if (document.querySelector(".mainlogo") != undefined){
-  navlogo.classList.add("logohidden");
+if (document.querySelector(".mainlogo") == undefined){
+  navlogo.classList.remove("logohidden");
 }

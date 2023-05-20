@@ -1,5 +1,4 @@
-<!-- for including html files -->
-<script src="./libs/csi.min.js"></script>
+
 
 <!doctype html>
 <html lang="en">
@@ -21,28 +20,14 @@
   <link href="/style.css" rel="stylesheet">
 </head>
 
-<body style="font-family: 'Monodeco';">
+<body style="font-family: 'Monodeco';position: relative;
+      z-index: 1;">
 
-  <div data-include="/nav.html"></div>
-
-  <!-- <iframe  src="nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
+  <?php include ("nav.html"); ?>
 
   <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px; z-index: 0;">
     <div id="container" style="position:relative;">
-      <iframe src="/starsAutoMove.html" style="
-          position: fixed;
-          top: 0px;
-          bottom: 0px;
-          right: 0px;
-          width: 100%;
-          border: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          z-index: -1;
-          height: 100%;
-        ">
-      </iframe>
+      <?php include ("starsAutoMove.html"); ?>
 
       <div id="overrideheader" class="mainheader col-md-5 p-lg-5 mx-auto my-5 align-middle" style="max-width: 100%; margin-top:0px!important; bottom: 40px;">
         
@@ -88,9 +73,8 @@
             </g>
           </g>
         </svg>
-        <script defer src="/logo.js"></script>
-        <p class="lead font-weight-light normal" id="slogan">The universe at your fingertips.</p>
-        <a class="btn btn-outline-secondary" href="/order/overview.html">Book your flight</a>
+        <p style="min-height: 30px;margin-bottom:40px" class="lead font-weight-light normal" id="slogan">The universe at your fingertips.</p>
+        <a class="btn btn-outline-secondary" href="/order/overview.php">Book your flight</a>
 		
 		<script>
 			// This script types out different slogans
@@ -126,7 +110,7 @@
 						}
 					} else {
 						if(getSloganText() == targetSlogan.slice(0, getSloganText().length)) {
-							console.log(getSloganText())
+							//console.log(getSloganText())
 							isAdding = true;
 							waitTicks = 10
 						} else {
@@ -156,10 +140,10 @@
               getting you to your destination in style and comfort. Our team of experts will help you plan your voyage
               and make sure you get to explore the galaxy in the most exciting and thrilling way possible. We offer a
               variety of packages and services to make sure you get the most out of your experience. Whether you are
-              looking for a weekend getaway to <a class="gradient1" href="/destinations/mars.html">Mars</a> in a
+              looking for a weekend getaway to <a class="gradient1" href="/destinations/mars.php">Mars</a> in a
               C-Class ship or a month
-              long trip to the <a href="/destinations/trappist.html" class="gradient1">Trappist system</a> in our finest
-              ship, <a href="ships.html#OdysseyOfTheStars" class="gradient1">Odyssey of the Stars</a>, Galactitrek has
+              long trip to the <a href="/destinations/trappist.php" class="gradient1">Trappist system</a> in our finest
+              ship, <a href="ships.php#OdysseyOfTheStars" class="gradient1">Odyssey of the Stars</a>, Galactitrek has
               something for you.</p>
 
             <iframe src="/hr.html" width="100%" height="70px" frameborder="0" height="auto" id="planet"
@@ -178,9 +162,9 @@
               company in the world, with SpaceX in a close second place.</p>
           </div>
           <div class="col-sm align-items-center justify-content-center">
-            <iframe src="/3D/earth.html" seamless width="100%" frameborder="0" height="500px" id="planet"
-              style="
-			  flow: hidden;"></iframe>
+            <div style="min-height:500px;max-width:500px;">
+              <?php include ("3D/earth.html");?>
+            </div>
             <label for="planet" class="kindaHidden text-left" style="text-align: center!important;">Click and drag to pan camera.</label>
           </div>
 
@@ -188,8 +172,7 @@
       </div>
     </div>
 
-    <div data-include="footer.html"></div>
-    <!-- <iframe src="footer.html" seamless width="100%" frameborder="0" height="500px" ></iframe> -->
+    <?php include ("footer.html"); ?>
 
 
     <!-- Bootstrap core JavaScript
@@ -198,10 +181,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
       crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
     <script>
       Holder.addTheme('thumb', {
         bg: '#55595c',
