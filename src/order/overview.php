@@ -1,35 +1,4 @@
-
-<!doctype html>
-
-
-<!-- for including html files -->
-<script src="../libs/csi.min.js"></script>
-
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
-
-    <title>Galactitrek Booking Overview</title>
-
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="/style.css" rel="stylesheet">
-  </head>
-
-  <body>
-	<?php include ("../nav.html"); ?>
-
-    <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
-	<div id="container" style="position:relative">
-		
-	  
-    </div>
-
+<?php ob_start(); ?>
     <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
 		<ul class="nav nav-tabs">
 		  <li class="nav-item">
@@ -60,7 +29,7 @@
 					<h2 class="display-5 font-weight-light">Pricing</h2>
 					<p class="lead font-weight-medium">Pricing is going to vary from ship to ship and location to location. Generally, the farther away a celestial body is away from earth, the more expensive it would be and ships with less people per capita cost more. See our <a class="gradient1" href="/pricing.html">pricing</a> for more information</p>
 					<h2 class="display-5 font-weight-light">Excursions</h2>
-					<p class="lead font-weight-medium gradient2">Most excursions we have labeled on our planets are able to be booked from our website but in the case of an excursion not loading, you can contact <a class="gradient1" href="/support.html">our support</a></p>
+					<p class="lead font-weight-medium gradient2">Most excursions we have labeled on our planets are able to be booked from our website but in the case of an excursion not loading, you can contact <a class="gradient1" href="/support.php">our support</a></p>
 				</div>
 				<div class="col-sm" style="text-align: center;">
 					<iframe src="../3D/mars.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
@@ -72,39 +41,5 @@
 		  
 		</ul>
     </div>
-
-    <div data-include="../footer.html"></div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
-  </body>
-</html>
-
-<style>
-	.drippyBlueToPurple {
-		background-image: linear-gradient(to right, blue, purple); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-	}
-	
-	.marsColoring {
-		background-image: linear-gradient(to right, red, yellow); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-	}
-	
-	h2 {
-		color: yellow
-	}
-</style>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<?php $content = ob_get_clean();
+include "../parent.php"; ?>

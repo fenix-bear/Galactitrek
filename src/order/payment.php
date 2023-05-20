@@ -1,37 +1,4 @@
-
-<!doctype html>
-
-
-<!-- for including html files -->
-<script src="../libs/csi.min.js"></script>
-
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
-
-    <title>Galactitrek Booking Payment</title>
-
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <link href="/style.css" rel="stylesheet">
-  </head>
-
-  <body>
-
-    <!-- <iframe src="../nav.html" seamless width="100%" frameborder="0" height="55px" ></iframe> -->
-	<?php include ("../nav.html"); ?>
-
-    <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px;">
-	<div id="container" style="position:relative">
-		
-	  
-    </div>
-	
+<?php ob_start(); ?>
 	<div class="d-flex">
 		<div class="d-md-flex flex-md-equal my-md-3 pl-md-3" style="width: 100%">
 			<ul class="nav nav-tabs">
@@ -89,25 +56,9 @@
 		<div>
 			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px" id="planet"></iframe>
 		</div>
-		
 	</div>
-
-    <div data-include="../footer.html"></div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
-  </body>
-</html>
+	<?php $content = ob_get_clean();
+include "../parent.php"; ?>
 
 <script>
 	function randomCard() {
@@ -177,5 +128,3 @@
 		color: yellow
 	}
 </style>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
