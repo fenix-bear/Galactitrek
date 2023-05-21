@@ -33,11 +33,11 @@
 					</div>
 				</div>
 			  </div>
-			  z
+			  
 			</ul>
 		</div>
 		<div>
-			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px" id="planet"></iframe>
+			<?php include ("../currentPriceWidget.html");?>
 		</div>
 	</div>
 <script src="/setAvailableTabs.js"></script>

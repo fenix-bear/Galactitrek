@@ -54,8 +54,7 @@
 			</ul>
 		</div>
 		<div>
-			
-			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px"></iframe>
+			<?php include ("../currentPriceWidget.html");?>
 		</div>
 	</div>
 	<?php $content = ob_get_clean();

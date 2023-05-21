@@ -35,8 +35,7 @@
 					<p class="lead font-weight-medium gradient2">Most excursions we have labeled on our planets are able to be booked from our website but in the case of an excursion not loading, you can contact <a class="gradient1" href="/support.php">our support</a></p>
 				</div>
 				<div class="col-sm" style="text-align: center;">
-					<iframe src="../3D/mars.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-					<label for="planet" class="kindaHidden">Click and drag to pan camera. You can see various locations on the globe.</label>
+					<!-- TODO: put something here -->
 				</div>
 				
 			</div>

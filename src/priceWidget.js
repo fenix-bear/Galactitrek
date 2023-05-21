@@ -15,7 +15,7 @@ function newCostItem(val, otherText, mode) {
 		
 		// Credit: http://www.java2s.com/Tutorials/Javascript/Javascript_Element_How_to/UL/Create_new_LI_element_and_append_to_UL.htm
 		el = document.createElement('li');
-		el.innerHTML = newJson.name + ": $" + newJson.price + otherText;
+		el.innerHTML = '<p>' + newJson.name + ": $" + newJson.price + otherText + '</p>';
 		document.getElementById('costItems').appendChild(el);
 		document.getElementById('totalPrice').innerHTML = "$" + Math.round(price)
 	} catch(e) {
@@ -25,7 +25,7 @@ function newCostItem(val, otherText, mode) {
 function savingsItem(num) {
 	if(num != undefined) {
 		el = document.createElement('li');
-		el.innerHTML = parseFloat(num) * 100 + "% discount"
+		el.innerHTML = '<p>' + parseFloat(num) * 100 + "% discount" + "</p>"
 		document.getElementById('costItems').appendChild(el);
 		
 		price *= 1 - parseFloat(num)
