@@ -5,7 +5,7 @@
         <div>
           <h2 class="display-5 font-weight-light">About</h2>
           <p class="lead font-weight-medium">This website was created for the 2023 National Technology Student
-            Association Webmaster competition by the Campbell County Highschool Chapter (#0000), consisting of Nathan Mills, Bjoern Petersen, and Nathan Feiler.</p>
+            Association Webmaster competition by the Campbell County Highschool Chapter (#4014), consisting of Nathan Mills, Bjoern Petersen, and Nathan Feiler.</p>
           <p class="lead font-weight-medium"><a href="/worklog.png" class="gradient1">Plan of Work Log</a> | <a href="/copyrightchecklist.png" class="gradient1">Student Copyright Checklist</a></p>
           <h2 class="display-5 font-weight-light">Sources</h2>
           <p class="lead font-weight-medium">This website uses the Bootstrap web framework and the three.js JavaScript
