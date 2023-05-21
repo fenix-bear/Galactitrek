@@ -32,7 +32,7 @@ function newNebula() {
 			map: map,
 			rotation: (Math.random() * 10000) 
 		} );
-		var maxDist = .7;
+		var maxDist = .2;
 		const sprite = new THREE.Sprite( material2 );
 		sprite.position.x = 0.005 / (Math.random() - 0.5);
 		sprite.position.y = 0.005 / (Math.random() - 0.5);

@@ -9,7 +9,7 @@
                 <a class="nav-link" href="venus.php">Venus</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="proxima.php">Proxima Centuri System</a>
+                <a class="nav-link" href="proxima.php">Proxima Centauri System</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="trappist.php">Trappist System</a>

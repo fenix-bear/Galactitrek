@@ -56,7 +56,7 @@
       <br>
       
       <i class="bi bi-quote"><img src="/quote.svg" class="invertedIcon"></img>I used to hate Galactitrek because of their scandalous doings; however, going on their newest ship, I don't care about that anymore.<img src="/quote.svg" class="invertedIcon" style="transform: rotate(180deg);"></img></i>
-      <p class="normal">Anonymous - Feburary 12, 2768</p>
+      <p class="normal">Anonymous - February 12, 2768</p>
     </div>
         </div>
 

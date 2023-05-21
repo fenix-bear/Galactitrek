@@ -5,16 +5,16 @@
     <div class="col-sm">
       
     <h2 class="display-5 font-weight-light">Speed</h2>
-    <p class="lead">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses pattented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
+    <p class="lead">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses patented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
     
     <h2 class="display-5 font-weight-light">Comfort</h2>
-    <p class="lead gradient2">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses pattented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
+    <p class="lead gradient2">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses patented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
     
     <h2 class="display-5 font-weight-light">Price</h2>
-    <p class="lead">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses pattented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
+    <p class="lead">At Galactitrek, we bring the universe to you. That's right, unlike other companies, our warp drive uses patented technology that works by bringing the universe to you. This means our ships can go faster than any other warp drive. For example, our fastest ship <a href="ships.php#AllureOfTheStars">Allure of the Stars</a> can travel at about 1 million times the speed of light.</p>
     
     <h2 class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
-      <p class="lead gradient2">If you can afford it, this will certainally be the best option for you. You can plot your own course, and make your own specialized adventure with this ship. Being the size of a medium-sized apartment building, this ship is the ultimate experience for anyone looking to explore the universe.</p>
+      <p class="lead gradient2">If you can afford it, this will certainly be the best option for you. You can plot your own course, and make your own specialized adventure with this ship. Being the size of a medium-sized apartment building, this ship is the ultimate experience for anyone looking to explore the universe.</p>
       <iframe src="../3D/smallShip.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
 
     </div>

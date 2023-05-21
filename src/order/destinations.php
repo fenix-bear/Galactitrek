@@ -25,9 +25,9 @@
 				<div class="my-3 py-3 row">
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Destinations</h2>
-						<p class="lead">We offer a large catalouge of destinations on our space ships, you can see more detail on the <a class="gradient1" href="/destinations/mars.php">destinations tab</a> for a more in-depth view.</p>
+						<p class="lead">We offer a large catalogue of destinations on our space ships, you can see more detail on the <a class="gradient1" href="/destinations/mars.php">destinations tab</a> for a more in-depth view.</p>
 						
-						<h2 class="display-5 font-weight-light">Proxima Centuri System</h2>
+						<h2 class="display-5 font-weight-light">Proxima Centauri System</h2>
 						<iframe src="/3D/proxima.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="addDestinationToCart(2)">Set as destination</button>
 						<br>

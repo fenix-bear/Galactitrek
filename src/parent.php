@@ -20,8 +20,6 @@
 </head>
 <body style="font-family: 'Monodeco';position: relative;z-index: 1;">
     <?php include ("nav.html"); ?>
-	<?php include ("setAvailableTabs.js"); ?>
-	
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px; z-index: 0;">
         <?php include ("starsAutoMove.html"); ?>
         <?php if (!empty($content)):
@@ -30,11 +28,19 @@
                 echo $defaultContent;
             endif; ?>
     </div>
+    <?php include ("footer.html"); ?>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
+    <script>
+    Holder.addTheme('thumb', {
+    bg: '#55595c',
+    fg: '#eceeef',
+    text: 'Thumbnail'
+    });
+    </script>
 </body>
 </html>

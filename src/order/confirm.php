@@ -87,7 +87,7 @@ include "../parent.php"; ?>
 	}
 	function loadExtraPaths() {
 		var closeLocations = ["Mercury Charging station", "Titan Base", "Ceres dumping station", "Uranus waste disposal", "Jupiter", "Europa", "Kepler-22b"]
-		var farLocations = ["Sirus A", "Titania base", "Wolf 359-B station", "Barnard's Star", "Gaia BH1"]
+		var farLocations = ["Sirius A", "Titania base", "Wolf 359-B station", "Barnard's Star", "Gaia BH1"]
 		var text = "Along with your listed location, we will also be going to the following for maintenance purposes:"
 		text+="<ul id='stopsList'>"
 		for(var i = 0; i < Math.floor(Math.random() * 2 + parseInt(sessionStorage.days / 2) + 1); i++) {
