@@ -2,22 +2,22 @@
 	<div class="d-flex">
 		<div class="d-md-flex flex-md-equal my-md-3 pl-md-3" style="width: 100%">
 			<ul class="nav nav-tabs">
-			  <li class="nav-item">
+			  <li class="nav-item" id="0">
 				<a class="nav-link" aria-current="page" href="overview.php">Overview</a>
 			  </li>
-			  <li class="nav-item">
+			  <li class="nav-item" id="1">
 				<a class="nav-link" href="ships.php">Choose your Ship</a>
 			  </li>
-			  <li class="nav-item">
+			  <li class="nav-item" id="2">
 				<a class="nav-link" href="room.php">Room</a>
 			  </li>
-			  <li class="nav-item">
+			  <li class="nav-item" id="3">
 				<a class="nav-link" href="destinations.php">Destinations</a>
 			  </li>
-			  <li class="nav-item">
+			  <li class="nav-item" id="4">
 				<a class="nav-link " href="payment.php">Payment info</a>
 			  </li>
-			  <li class="nav-item">
+			  <li class="nav-item" id="5">
 				<a class="nav-link active" href="confirm.php">Confirm your booking</a>
 			  </li>
 			  
@@ -40,6 +40,7 @@
 			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px" id="planet"></iframe>
 		</div>
 	</div>
+<script src="/setAvailableTabs.js"></script>
 <?php $content = ob_get_clean();
 include "../parent.php"; ?>
 
