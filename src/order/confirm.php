@@ -61,7 +61,7 @@ include "../parent.php"; ?>
 				To: sessionStorage.email,
 				From: "galactitrek@gmail.com",
 				Subject: "Galactitrek Booking",
-				Body: '<body><img src="https://i.ibb.co/mqbp0Cz/logo.png" alt="Galactitrek" title="Galactitrek" style="display:block" width="467" height="47"></img><h1>Flight booked!</h1><p>Incase you forgot, here are the details of your flight:</p>' + details + '</body><hr><footer>From the Galactitrek team</footer>',
+				Body: '<body><h1>Flight booked!</h1><p>Incase you forgot, here are the details of your flight:</p>' + details + '</body><hr><footer>From the Galactitrek team</footer>',
 			})
 			.then(function(message) {
 				if (message == "OK") {
