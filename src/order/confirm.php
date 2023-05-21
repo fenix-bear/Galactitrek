@@ -43,6 +43,37 @@
 <?php $content = ob_get_clean();
 include "../parent.php"; ?>
 
+
+<script src=
+    "https://smtpjs.com/v3/smtp.js">
+  </script>
+
+<script type="text/javascript">
+  
+	// Credit: https://www.geeksforgeeks.org/how-to-send-an-email-from-javascript/#
+	const token = "F8E30058BD0237FE3708F610140F285E97C4"
+    function sendEmail(details) {
+		console.log(details);
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "galactitrek@gmail.com",
+        Password: token,
+        To: sessionStorage.email,
+        From: "galactitrek@gmail.com",
+        Subject: "Galactitrek Booking",
+        Body: '<body><img src="https://i.ibb.co/mqbp0Cz/logo.png" alt="Galactitrek" title="Galactitrek" style="display:block" width="467" height="47"></img><h1>Flight booked!</h1><p>Incase you forgot, here are the details of your flight:</p>'+details+'</body><hr><footer>From the Galactitrek team</footer>',
+      })
+        .then(function (message) {
+			if(message == "OK") {
+				alert("We sent an email to " + sessionStorage.email + ". It is probably in your spam.")
+			} else {
+				alert("Did you put in the correct email? " + sessionStorage.email)
+				console.log(message)
+			}
+        });
+    }
+</script>
+
 <script>
 	function loadFlightInfo() {
 		var randomTimes = ["12AM", "8:30 AM", "11:30 AM", "2:00 PM", "4:20PM", "4:30 PM", "5:45PM", "6:20PM", "7:30PM", "8:10PM", "9:50PM", "10:30PM", "11:45PM"]
@@ -57,7 +88,7 @@ include "../parent.php"; ?>
 		var closeLocations = ["Mercury Charging station", "Titan Base", "Ceres dumping station", "Uranus waste disposal", "Jupiter", "Europa", "Kepler-22b"]
 		var farLocations = ["Sirus A", "Titania base", "Wolf 359-B station", "Barnard's Star", "Gaia BH1"]
 		var text = "Along with your listed location, we will also be going to the following for maintenance purposes:"
-		text+="<ul>"
+		text+="<ul id='stopsList'>"
 		for(var i = 0; i < Math.floor(Math.random() * 2 + parseInt(sessionStorage.days / 2) + 1); i++) {
 			if(i > 3) {
 				var ran = Math.floor(Math.random() * farLocations.length)
@@ -90,6 +121,9 @@ include "../parent.php"; ?>
   loadFlightInfo()
   loadExtraPaths()
   fakeDeductMoney()
+  if(sessionStorage.email != undefined) {
+	  sendEmail("<p>" + document.getElementById("flightInfo").innerHTML + "</p><p>List of stops:</p><ul>" + document.getElementById("stopsList").innerHTML + "</ul>")
+  }
 </script>
 
 <style>

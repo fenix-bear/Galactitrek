@@ -39,9 +39,9 @@
 					</div>
 					<div class="col-sm">
 						<h2 class="display-5 font-weight-light">Email</h2>
-						<p class="lead">Recieve data from our newsletter about your next cruise</p>
+						<p class="lead">Recieve information about your next cruise.</p>
 						
-						<input class="btn bg-transparent btn-outline-primary rgb"></input>
+						<input class="btn bg-transparent btn-outline-primary rgb" id="email"></input>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="submitEmail()">Submit email</button>
 					</div>
 					
@@ -113,7 +113,7 @@ include "../parent.php"; ?>
 	}
 	
 	function submitEmail() {
-		
+		sessionStorage.email = document.getElementById("email").value
 	}
 	
 	function loadCard() {
