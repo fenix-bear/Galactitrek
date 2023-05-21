@@ -36,6 +36,8 @@
 				</div>
 				<div class="col-sm" style="text-align: center;">
 					<!-- TODO: put something here -->
+					<label for="game" class="kindaHidden text-left" style="text-align: center!important;">Simple orbital mechanics that Galactitrek uses to get to your destination on time. Click and drag your mouse onto the canvas to make new moons. You can see that the velocity of the moons change as it orbits. This can be exploited by Galactitrek so that the ship gains velocity without burning fuel.</label>
+					<iframe src="orbitGame.html" seamless width="100%" frameborder="0" height="100%" id="game"></iframe>
 				</div>
 				
 			</div>

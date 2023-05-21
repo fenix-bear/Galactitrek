@@ -1,15 +1,5 @@
-<body>
-<div id="canvasContainer" style="position: relative;
-position: fixed;
-top: 0;
-bottom: 0;
-right: 0;
-width: 100%;
-z-index: 1000000;
-pointer-events: none;
-">
-<canvas id="body2" width="calc(100% - 100px)" height="100%" style="padding: 0; margin: 0; pointer-events: none"></canvas>
-</div>
+<body style="padding: 0; margin: 0; overflow: hidden;">
+	<canvas id="body3" width="700px" height="1200px" style="background-color: rgba(0, 0, 0, 0.5); padding: 0; margin: 0; "></canvas>
 </body>
 <script>
 	function particle() {
@@ -20,9 +10,9 @@ pointer-events: none;
 				this.x = x;
 				this.y = y;
 				this.vx = mouseXspeed + (Math.random() - 0.5) * 10;
-				this.vy = mouseYspeed + (Math.random() - 0.2) * 10;
+				this.vy = mouseYspeed + (Math.random() - 0.5) * 10;
 				if(bright) {
-					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 80 + "%)"
+					this.color = "hsla(" + "0, 0%, " + (Math.random() * 100) + "%," + 100 + "%)"
 				} else {
 					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 80 + "%)"
 				}
@@ -33,18 +23,36 @@ pointer-events: none;
 				this.y -= this.vy * timeStep;
 			}
 			physics(timeStep) {
-				this.vy -= gravity * timeStep;
+				// Normalized X and Y, also distance
 				
+				var dX = this.x - canvas.width / 2
+				var dY = this.y - canvas.height / 2
+				var dist = Math.sqrt((dX * dX) + (dY * dY))
+				
+				if(dist < canvas.width / 16) {
+					return true
+				}
+				
+				this.vx += dX / dist * gravityStrength;
+				this.vy += dY / dist * gravityStrength;
 				this.applyBody(timeStep);
+				return false;
 			}
 			
 		}
-		var canvas = document.getElementById("body2");
+		class body {
+			constructor(x, y, gravity) {
+			
+			}
+		}
+		var canvas = document.getElementById("body3");
 		var ctx = canvas.getContext("2d");
 		
-		var gravity = 0.3;
+		//var gravity = 0.3;
+		var gravityStrength = 0.1
 		var mouseX2 = 50;
 		var mouseY2 = 50;
+		var planetBodies = []
 		
 		var mouseXspeed = 0;
 		var mouseYspeed = 0;
@@ -66,10 +74,10 @@ pointer-events: none;
 		function project2D(dot) {
 			ctx.fillStyle = dot.color;
 			ctx.fillRect(dot.x, dot.y, 2, 2);
-			if(dot.y > canvas.height || dot.x < 0) {
+			if(dot.x > canvas.width || dot.x < 0) {
 				return true;
 			}
-			if(dot.y > canvas.width || dot.y < 0) {
+			if(dot.y > canvas.height || dot.y < 0) {
 				return true;
 			}
 			return false;
@@ -77,23 +85,31 @@ pointer-events: none;
 		
 		function drawBG(){
 			if(trueMouseClick) {
-				getRandomStars(20, true)
+				getRandomStars(5, true)
 				trueMouseClick = false
 			}
 			if(mouseDown) {
-				getRandomStars(20, false)
+				getRandomStars(1, true)
 			}
+			
+			
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight;
 			for(var i = 0; i < stars.length; i++) {
 				var outOfView = project2D(stars[i])
-				stars[i].physics(1);
-				if(outOfView) {
+				var colliding = stars[i].physics(1);
+				if(outOfView || colliding) {
 					stars.splice(i, 1);
 					i--;
 				}
 			}
+			
+			// Only supports one body
+			ctx.fillStyle = "#0000FF";
+			ctx.beginPath();
+			ctx.arc(canvas.width / 2, canvas.height / 2,  canvas.width / 32, 0, 2 * Math.PI);
+			ctx.fill();
+			
+			
 			setTimeout(drawBG, 20);
 			camY = 0;
 		}

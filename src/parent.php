@@ -20,7 +20,6 @@
 </head>
 <body style="font-family: 'Monodeco';position: relative;z-index: 1;">
     <?php include ("nav.html"); ?>
-	<?php include ("particle.html"); ?>
 	
     <div class="position-relative overflow-hidden text-center bg-light" style=" padding-bottom: 0px; margin: 0px; z-index: 0;">
         <?php include ("starsAutoMove.html"); ?>

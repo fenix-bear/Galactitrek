@@ -132,12 +132,9 @@
             company in the world, with SpaceX in a close second place.</p>
         </div>
         <div class="col-sm align-items-center justify-content-center" style="text-align: center">
-			<iframe src="/3D/earth.html" seamless width="100%" frameborder="0" height="500px" id="planet"></iframe>
-          <!--
 		  <div style="min-height:500px;width: 100%">
             <?php include ("./3D/earth.html");?>
           </div>
-		  -->
           <label for="planet" class="kindaHidden text-left" style="text-align: center!important;">Click and drag to pan camera.</label>
         </div>
 
