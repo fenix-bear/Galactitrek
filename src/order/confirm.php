@@ -43,7 +43,7 @@
 <script src="/setAvailableTabs.js"></script>
 <?php $content = ob_get_clean();
 include "../parent.php"; ?>
-
+<?php include ("confeti.html"); ?>
 
 <script src=
     "https://smtpjs.com/v3/smtp.js">

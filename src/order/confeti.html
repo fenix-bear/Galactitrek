@@ -8,7 +8,7 @@ width: 100%;
 z-index: 1000000;
 pointer-events: none;
 ">
-<canvas id="body2" width="calc(100% - 100px)" height="100%" style="padding: 0; margin: 0; pointer-events: none"></canvas>
+<canvas id="body3" width="calc(100% - 100px)" height="100%" style="padding: 0; margin: 0; pointer-events: none"></canvas>
 </div>
 </body>
 <script>
@@ -22,9 +22,9 @@ pointer-events: none;
 				this.vx = mouseXspeed + (Math.random() - 0.5) * 10;
 				this.vy = mouseYspeed + (Math.random() - 0.2) * 10;
 				if(bright) {
-					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 8 + "%)"
+					this.color = "hsla(" + (Math.random() * 255) + ", 100%, 70%," + 100 + "%)"
 				} else {
-					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 8 + "%)"
+					this.color = "hsla(" + (Math.random() * 255) + ", 100%, 70%," + 100 + "%)"
 				}
 				stars.push(this)
 			}
@@ -39,7 +39,7 @@ pointer-events: none;
 			}
 			
 		}
-		var canvas = document.getElementById("body2");
+		var canvas = document.getElementById("body3");
 		var ctx = canvas.getContext("2d");
 		
 		var gravity = 0.3;
@@ -65,7 +65,7 @@ pointer-events: none;
 		//
 		function project2D(dot) {
 			ctx.fillStyle = dot.color;
-			ctx.fillRect(dot.x, dot.y, 2, 2);
+			ctx.fillRect(dot.x, dot.y, 3, 3);
 			if(dot.y > canvas.height || dot.x < 0) {
 				return true;
 			}
@@ -73,6 +73,15 @@ pointer-events: none;
 				return true;
 			}
 			return false;
+		}
+		
+		
+		function newConfeti(){
+			mouseX2 = Math.random() * canvas.width;
+			mouseY2 = Math.random() * canvas.height;
+			getRandomStars(40, true)
+			console.log("new")
+			setTimeout(newConfeti, 500);
 		}
 		
 		function drawBG(){
@@ -97,24 +106,9 @@ pointer-events: none;
 			setTimeout(drawBG, 20);
 			camY = 0;
 		}
-		
-		onmousemove = function(e){
-			mouseXspeed = 0 - (e.clientX - mouseX2) / 2;
-			mouseYspeed = 0 - (e.clientY - mouseY2) / 2;
-			mouseX2 = e.clientX;
-			mouseY2 = e.clientY;
-		}
-		
-		document.body.onmousedown = function() { 
-			trueMouseClick = true
-			mouseDown = true;
-		}
-		document.body.onmouseup = function() {
-			mouseDown = false;
-		}
+		newConfeti();
 		drawBG();
 	}
 	
-	// Disabled
-	//particle()
+	particle()
 </script>
