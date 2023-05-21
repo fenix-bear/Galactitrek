@@ -28,12 +28,12 @@
 						<p class="lead">We use standardized Earth Credits™ for payment, or if you have a credit card that supports Galactibucks™, you are able to obtain a discount or even get a free cruise. Note that the discounts do not stack.</p>
 						
 						<h2 class="display-5 font-weight-light">Discount code</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" id="discountInput" ></input>
+						<input class="btn bg-transparent btn-outline-primary" id="discountInput" ></input>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="discount(document.getElementById('discountInput').value)">Apply discount</button>
 						<hr>
 
 						<h2 class="display-5 font-weight-light">Earth Credits</h2>
-						<input class="btn bg-transparent btn-outline-primary rgb" onload="loadCard()" id="card" disabled></input>
+						<input class="btn bg-transparent btn-outline-primary rgb" onload="loadCard()" id="card" disabled style="width: 100%"></input>
 						<br>
 						<label class="kindaHidden">Note that your card number is automatically put in</label>
 					</div>
@@ -41,7 +41,7 @@
 						<h2 class="display-5 font-weight-light">Email</h2>
 						<p class="lead">Receive information about your next cruise.</p>
 						
-						<input class="btn bg-transparent btn-outline-primary rgb" id="email"></input>
+						<input class="btn bg-transparent btn-outline-primary" id="email"></input>
 						<button class="btn bg-transparent btn-outline-primary rgb" onclick="submitEmail()">Submit email</button>
 					</div>
 					
@@ -54,7 +54,8 @@
 			</ul>
 		</div>
 		<div>
-			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px" id="planet"></iframe>
+			
+			<iframe src="/currentPriceWidget.html" seamless width="100%" frameborder="0" height="100%px"></iframe>
 		</div>
 	</div>
 	<?php $content = ob_get_clean();
