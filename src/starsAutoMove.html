@@ -6,75 +6,80 @@ bottom: 0;
 right: 0;
 width: 100%;
 z-index: -1;
-"">
+">
 <canvas id="body" width="calc(100% - 100px)" height="100%" style="background-color: black; padding: 0; margin: 0; "></canvas>
 </div>
 </body>
 <script>
-	var stars = []
-	
-	class pos {
-		constructor(x, y, z) {
-			this.x = x;
-			this.y = y;
-			this.z = z;
-			stars.push(this)
-		}
-	}
-	var canvas = document.getElementById("body");
-	var ctx = canvas.getContext("2d");
-	
-	var mouseX = 0;
-	var mouseY = 0;
-	
-	
-	var camX = 0;
-	var camY = 0;
-	var camZ = 0;
-	
-	function getRandomStars(numNewStars) {
-		for(var i = 0; i < numNewStars; i++) {
-			var randomZ = Math.random() * 10 + 1
-			var newStarAdded = new pos((Math.random() - 0.5) * 4000 * randomZ, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
-		}
-	}
-	
-	function getStarsAheadOfCam(numNewStars) {
-		for(var i = 0; i < numNewStars; i++) {
-			var randomZ = Math.random() * 10 + 1
-			var newStarAdded = new pos(camX * 3 - canvas.width * 5, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
-		}
-	}
-	
-	// Draws point in 3d based of delta position of camx y z
-	// Returns if point is left of camera
-	function project3D(x, y, z) {
-		ctx.fillStyle = "#FFFFFF";
-		var projectedX = (camX + (mouseX - canvas.width / 2) / 1 - x) / z + canvas.width / 2
-		ctx.fillRect(projectedX, (camY + (mouseY - canvas.width / 2) / 1 - y) / z + canvas.height / 2, 2, 2);
+	// In its own function so that other things can have the same var names
+	function starsAutoMove() {
+		var stars = []
 		
-		return projectedX < 0
-	}
-	
-	function drawBG(){
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		canvas.width = window.innerWidth;
-		canvas.height = window.innerHeight;
-		getStarsAheadOfCam(2)
-		for(var i = 0; i < stars.length; i++) {
-			var left = project3D(stars[i].x, stars[i].y, stars[i].z)
-			
-			if(left) {
-				stars.splice(i, 1);
-				i--;
+		class pos {
+			constructor(x, y, z) {
+				this.x = x;
+				this.y = y;
+				this.z = z;
+				stars.push(this)
 			}
 		}
-		camX-=10;
-		camY = -window.scrollY;
-		setTimeout(drawBG, 20);
+		var canvas = document.getElementById("body");
+		var ctx = canvas.getContext("2d");
+		
+		var mouseX = 0;
+		var mouseY = 0;
+		
+		
+		var camX = 0;
+		var camY = 0;
+		var camZ = 0;
+		
+		function getRandomStars(numNewStars) {
+			for(var i = 0; i < numNewStars; i++) {
+				var randomZ = Math.random() * 10 + 1
+				var newStarAdded = new pos((Math.random() - 0.5) * 4000 * randomZ, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
+			}
+		}
+		
+		function getStarsAheadOfCam(numNewStars) {
+			for(var i = 0; i < numNewStars; i++) {
+				var randomZ = Math.random() * 10 + 1
+				var newStarAdded = new pos(camX * 3 - canvas.width * 5, (Math.random() - 0.5) * 2000 * randomZ, randomZ);
+			}
+		}
+		
+		// Draws point in 3d based of delta position of camx y z
+		// Returns if point is left of camera
+		function project3D(x, y, z) {
+			ctx.fillStyle = "#FFFFFF";
+			var projectedX = (camX + (mouseX - canvas.width / 2) / 1 - x) / z + canvas.width / 2
+			ctx.fillRect(projectedX, (camY + (mouseY - canvas.width / 2) / 1 - y) / z + canvas.height / 2, 2, 2);
+			
+			return projectedX < 0
+		}
+		
+		function drawBG(){
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			getStarsAheadOfCam(2)
+			for(var i = 0; i < stars.length; i++) {
+				var left = project3D(stars[i].x, stars[i].y, stars[i].z)
+				
+				if(left) {
+					stars.splice(i, 1);
+					i--;
+				}
+			}
+			camX-=10;
+			camY = -window.scrollY;
+			setTimeout(drawBG, 20);
+		}
+		
+		
+		getRandomStars(1000)
+		drawBG();
 	}
 	
-	
-	getRandomStars(1000)
-	drawBG();
+	starsAutoMove()
 </script>

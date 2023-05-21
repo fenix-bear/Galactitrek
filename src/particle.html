@@ -1,0 +1,119 @@
+<body>
+<div id="canvasContainer" style="position: relative;
+position: fixed;
+top: 0;
+bottom: 0;
+right: 0;
+width: 100%;
+z-index: 1000000;
+pointer-events: none;
+">
+<canvas id="body2" width="calc(100% - 100px)" height="100%" style="padding: 0; margin: 0; pointer-events: none"></canvas>
+</div>
+</body>
+<script>
+	function particle() {
+		var stars = []
+		
+		class pos {
+			constructor(x, y, bright) {
+				this.x = x;
+				this.y = y;
+				this.vx = mouseXspeed + (Math.random() - 0.5) * 10;
+				this.vy = mouseYspeed + (Math.random() - 0.2) * 10;
+				if(bright) {
+					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 50 + "%)"
+				} else {
+					this.color = "hsla(" + (Math.random() * 255) + ", 40%, 50%," + 10 + "%)"
+				}
+				stars.push(this)
+			}
+			applyBody(timeStep) {
+				this.x -= this.vx * timeStep;
+				this.y -= this.vy * timeStep;
+			}
+			physics(timeStep) {
+				this.vy -= gravity * timeStep;
+				
+				this.applyBody(timeStep);
+			}
+			
+		}
+		var canvas = document.getElementById("body2");
+		var ctx = canvas.getContext("2d");
+		
+		var gravity = 0.3;
+		var mouseX2 = 50;
+		var mouseY2 = 50;
+		
+		var mouseXspeed = 0;
+		var mouseYspeed = 0;
+		
+		var mouseDown = false;
+		
+		var camX = 0;
+		var camY = 0;
+		var camZ = 0;
+		var trueMouseClick = false
+		
+		function getRandomStars(numNewStars, bright) {
+			for(var i = 0; i < numNewStars; i++) {
+				var newStarAdded = new pos(mouseX2, mouseY2, bright);
+			}
+		}
+		
+		//
+		function project2D(dot) {
+			ctx.fillStyle = dot.color;
+			ctx.fillRect(dot.x, dot.y, 2, 2);
+			if(dot.y > canvas.height || dot.x < 0) {
+				return true;
+			}
+			if(dot.y > canvas.width || dot.y < 0) {
+				return true;
+			}
+			return false;
+		}
+		
+		function drawBG(){
+			if(trueMouseClick) {
+				getRandomStars(20, true)
+				trueMouseClick = false
+			}
+			if(mouseDown) {
+				getRandomStars(20, false)
+			}
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			for(var i = 0; i < stars.length; i++) {
+				var outOfView = project2D(stars[i])
+				stars[i].physics(1);
+				if(outOfView) {
+					stars.splice(i, 1);
+					i--;
+				}
+			}
+			setTimeout(drawBG, 20);
+			camY = 0;
+		}
+		
+		onmousemove = function(e){
+			mouseXspeed = 0 - (e.clientX - mouseX2) / 2;
+			mouseYspeed = 0 - (e.clientY - mouseY2) / 2;
+			mouseX2 = e.clientX;
+			mouseY2 = e.clientY;
+		}
+		
+		document.body.onmousedown = function() { 
+			trueMouseClick = true
+			mouseDown = true;
+		}
+		document.body.onmouseup = function() {
+			mouseDown = false;
+		}
+		drawBG();
+	}
+	
+	particle()
+</script>
