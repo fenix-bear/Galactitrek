@@ -105,7 +105,8 @@ a.gradient1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 3s linear infinite;
-  transition: 0.3s;
+  
+  transition: width 2s, height 2s, background 2s, rotate 2s;
 }
 
 .rgb:hover {
@@ -114,6 +115,8 @@ a.gradient1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: animate-gradient 10s linear infinite;
+  
+  transition: width 2s, height 2s, background 2s, rotate 2s, transform 2s;
 }
 
 @keyframes animate-gradient {
