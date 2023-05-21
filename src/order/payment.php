@@ -75,13 +75,14 @@ include "../parent.php"; ?>
 	function asciiStringRandom(str) {
 		var num = 0;
 		for(var i = 0; i < str.length; i++) {
-			num += str.charCodeAt(i) * i
+			num += str.charCodeAt(i) * (i+1)
 		}
 		return num
 	}
 	
 	function seededRandom(seed) {
-		return Math.sin(Math.tan(asciiStringRandom(seed) * 10000));
+		var encoded = asciiStringRandom(seed)
+		return Math.sin(Math.tan(encoded * Math.sin(encoded + 1) + encoded));
 	}
 	
 	function addDestinationToCart(shipIndex) {

@@ -17,7 +17,7 @@ function newCostItem(val, otherText, mode) {
 		el = document.createElement('li');
 		el.innerHTML = newJson.name + ": $" + newJson.price + otherText;
 		document.getElementById('costItems').appendChild(el);
-		document.getElementById('totalPrice').innerHTML = "$" + price
+		document.getElementById('totalPrice').innerHTML = "$" + Math.round(price)
 	} catch(e) {
 		
 	}
@@ -29,7 +29,7 @@ function savingsItem(num) {
 		document.getElementById('costItems').appendChild(el);
 		
 		price *= 1 - parseFloat(num)
-		document.getElementById('totalPrice').innerHTML = "$" + price
+		document.getElementById('totalPrice').innerHTML = "$" + Math.round(price)
 	}
 }
 
