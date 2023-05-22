@@ -1,26 +1,26 @@
 <?php ob_start(); ?>
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-		<ul class="nav nav-tabs">
-		  <li class="nav-item" id="0">
+<div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+	<ul class="nav nav-tabs">
+		<li class="nav-item" id="0">
 			<a class="nav-link active" aria-current="page" href="overview.php">Overview</a>
-		  </li>
-		  <li class="nav-item" id="1">
+		</li>
+		<li class="nav-item" id="1">
 			<a class="nav-link" href="ships.php">Choose your Ship</a>
-		  </li>
-		  <li class="nav-item" id="2">
+		</li>
+		<li class="nav-item" id="2">
 			<a class="nav-link" href="ships.php">Room</a>
-		  </li>
-		  <li class="nav-item" id="3">
+		</li>
+		<li class="nav-item" id="3">
 			<a class="nav-link disabled" href="destinations.php">Destinations</a>
-		  </li>
-		  <li class="nav-item" id="4">
+		</li>
+		<li class="nav-item" id="4">
 			<a class="nav-link disabled" href="payment.php">Payment info</a>
-		  </li>
-		  <li class="nav-item" id="5">
+		</li>
+		<li class="nav-item" id="5">
 			<a class="nav-link disabled" href="confirm.php">Confirm your booking</a>
-		  </li>
-		  
-		  <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black">
+		</li>
+
+		<div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black">
 			<div class="my-3 py-3 row">
 				<div class="col-sm">
 					<h2 class="display-5 font-weight-light">Training</h2>
@@ -36,15 +36,15 @@
 				</div>
 				<div class="col-sm" style="text-align: center;">
 					<!-- TODO: put something here -->
-					<label for="game" class="kindaHidden text-left" style="text-align: center!important;">Simple orbital mechanics that Galactitrek uses to get to your destination on time. Click and drag your mouse onto the canvas to make new moons. You can see that the velocity of the moons change as it orbits. This can be exploited by Galactitrek so that the ship gains velocity without burning fuel.</label>
-					<iframe src="orbitGame.html" seamless width="100%" frameborder="0" height="100%" id="game"></iframe>
+					<!--<label for="game" class="kindaHidden text-left" style="text-align: center!important;">Simple orbital mechanics that Galactitrek uses to get to your destination on time. Click and drag your mouse onto the canvas to make new moons. You can see that the velocity of the moons change as it orbits. This can be exploited by Galactitrek so that the ship gains velocity without burning fuel.</label>
+					<iframe src="orbitGame.html" seamless width="100%" frameborder="0" height="100%" id="game"></iframe>-->
 				</div>
-				
+
 			</div>
-		  </div>
-		  
-		</ul>
-    </div>
+		</div>
+
+	</ul>
+</div>
 <script src="/setAvailableTabs.js"></script>
 <script src="/setAvailableTabs.js"></script>
 <?php $content = ob_get_clean();
