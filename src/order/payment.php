@@ -116,6 +116,7 @@ include "../parent.php"; ?>
 	
 	function submitEmail() {
 		sessionStorage.email = document.getElementById("email").value
+		alert("Email submitted.")
 	}
 	
 	function loadCard() {

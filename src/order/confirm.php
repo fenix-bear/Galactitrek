@@ -122,7 +122,7 @@ include "../parent.php"; ?>
 	loadFlightInfo()
 	loadExtraPaths()
 	fakeDeductMoney()
-	if (sessionStorage.email != undefined) {
+	if (sessionStorage.email != undefined && sessionStorage.email != "") {
 		sendEmail("<p>" + document.getElementById("flightInfo").innerHTML + "</p><p>List of stops:</p><ul>" + document.getElementById("stopsList").innerHTML + "</ul>")
 	}
 </script>

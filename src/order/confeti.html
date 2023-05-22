@@ -66,10 +66,10 @@ pointer-events: none;
 		function project2D(dot) {
 			ctx.fillStyle = dot.color;
 			ctx.fillRect(dot.x, dot.y, 3, 3);
-			if(dot.y > canvas.height || dot.x < 0) {
+			if(dot.x > canvas.width || dot.x < 0) {
 				return true;
 			}
-			if(dot.y > canvas.width || dot.y < 0) {
+			if(dot.y > canvas.height || dot.y < 0) {
 				return true;
 			}
 			return false;
