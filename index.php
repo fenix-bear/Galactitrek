@@ -124,12 +124,12 @@
             and Nathan Feiler as a private space faring company for cargo delivery we soon rebranded into commercial
             space flight for everyday citizens in 2261. After suffering several setbacks (such as the
             Challenger<sup class="gradient1">2</sup> disaster and losing government funding) we became the second leading space tourism
-            company, behind SpaceX. After the 2nd Cold War began in 2697 we regained our government funding from the
+            company, behind AstroTours. After the 2nd Cold War began in 2697 we regained our government funding from the
             US and were able to massively expand. After the 2nd Cold War ended in 2715 we were able to then open up
             our space tourism even further to become within reach of extremely filthy wealthy people for what is to
             them, low costs. After we gained funding from the United Nations in 2730 we were able to expand even
             further to the extremely wealthy people, which leads us to today where we are the leading space tourism
-            company in the world, with SpaceX in a close second place.</p>
+            company in the world, with AstroTours in a close second place.</p>
         </div>
         <div class="col-sm align-items-center justify-content-center" style="text-align: center">
 		  <div style="min-height:500px;width: 100%">

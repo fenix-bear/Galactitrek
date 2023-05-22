@@ -11,7 +11,7 @@
     <p class="lead gradient2">Also, at Galactitrek, we provide the highest quality comfort so that you can enjoy your interstellar voyage in maximum relaxation. We also have 24/7 personal AI assistants so that you can have every need taken care of.</p>
     
     <h2 class="display-5 font-weight-light">Price</h2>
-    <p class="lead">Lastly, at Galactitrek, we offer some of the best pricing in the world for our ships. Unlike Astrotours or SpaceX, we actually sell our rooms at a slight loss. We do this so that everyone can get a chance at experiencing space.</p>
+    <p class="lead">Lastly, at Galactitrek, we offer some of the best pricing in the world for our ships. Unlike Astrotours or AstroTours, we actually sell our rooms at a slight loss. We do this so that everyone can get a chance at experiencing space.</p>
     
     <h2 id="personal" class="display-5 font-weight-light" style="color: yellow">Personal Ship</h2>
       <p class="lead gradient2">If you can afford it, this will certainly be the best option for you. You can plot your own course, and make your own specialized adventure with this ship. Being the size of a medium-sized apartment building, this ship is the ultimate experience for anyone looking to explore the universe.</p>
