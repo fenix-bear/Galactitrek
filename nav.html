@@ -20,32 +20,52 @@
 <body>
 	<!-- I'm not sure why but the hamburger menu just does not work!-->
 	<!-- its probably because of the include method-->
-	<nav class="site-header sticky-top py-1 navMain">
-	  <div class="container d-flex flex-column flex-md-row justify-content-between">
+	<nav class="navbar site-header sticky-top navbar-expand-lg py-1 navMain">
+	
 		<li class="nav-item" style="list-style-type:none">
-			<a href="/mobileBar.html">
-				<img class="navbar-brand" src="/hamIcon.png" style="position:relative; top:2px; opacity: 0.2;"></img>
-			</a>
 			<a class="py-2" href="/index.php ">
 				<img class="logohidden navlogo navbar-brand" id="navlogo" src="/logoInverted.svg" style="position:relative; top:2px;"></img>
 			</a>
 			<script defer src="/logo.js"></script>
-			<!-- Note that this mobile support is really really really dumb and is just so we don't get disqualified right away -->
-			<!-- Adding a hamburger menu is for some reason like impossible for some reason-->
-			
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
 		  </button>
 		</li>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"><img class="navbar-brand" src="/hamIcon.png" style="position:relative; top:-6px; opacity: 1;"></img></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+		  <li class="nav-item">
+			<a class="nav-link" href="/destinations/mars.php">Destinations</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/ships.php">Ships</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/order/overview.php">Book Flight</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/faq.php">FAQ</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/support.php">Support</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/reviews.php">Reviews</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="/about.php">About</a>
+		  </li>
+		</ul>
 		
-		<!-- Note if you add anything to this, add it to mobileList.html aswell -->
-		<a class="py-2 d-none d-md-inline-block" href="/destinations/mars.php">Destinations</a>
+		
+		<!--
 		<a class="py-2 d-none d-md-inline-block" href="/ships.php">Ships</a>
 		<a class="py-2 d-none d-md-inline-block" href="/order/overview.php">Book Flight</a>
 		<a class="py-2 d-none d-md-inline-block" href="/faq.php">FAQ</a>
 		<a class="py-2 d-none d-md-inline-block" href="/support.php">Support</a>
 		<a class="py-2 d-none d-md-inline-block" href="/reviews.php">Reviews</a>
 		<a class="py-2 d-none d-md-inline-block" href="/about.php">About</a>
+		-->
 	  </div>
 	</nav>
 </body>
