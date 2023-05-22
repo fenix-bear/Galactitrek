@@ -4,13 +4,13 @@
 <script>
 	function particle() {
 		var stars = []
-		var shipNames = ["Odyssey of the Stars", "Voyage of the Stars", "The Icon ship", "The Oasis", "The Galactic"]
+		var shipNames = ["Odyssey of the Stars", "Voyage of the Stars", "The Icon ship", "The Oasis", "The Galactic", "Voyager III", "Utopia of the stars"]
 		class pos {
 			constructor(x, y, bright) {
 				this.x = canvas.width / 2;
 				this.y = Math.random() * canvas.height;
 				this.vx = mouseXspeed + (Math.random() - 0.5) * 10;
-				this.vy = mouseYspeed + (Math.random() - 0.5) * 10;
+				this.vy = mouseYspeed + (Math.random() - 0.5) * 4;
 				this.text = shipNames.pop()
 				if(bright) {
 					this.color = "hsla(" + "0, 0%, " + "100" + "%," + 100 + "%)"
@@ -50,7 +50,7 @@
 		var ctx = canvas.getContext("2d");
 		
 		//var gravity = 0.3;
-		var gravityStrength = 0.1
+		var gravityStrength = 0.08
 		var mouseX2 = 50;
 		var mouseY2 = 50;
 		var planetBodies = []
@@ -141,7 +141,7 @@
 			mouseDown = false;
 		}
 		drawBG();
-		getRandomStars(5, true)
+		getRandomStars(7, true)
 	}
 	
 	// Disabled
