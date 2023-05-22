@@ -20,7 +20,7 @@
 			<a class="nav-link disabled" href="confirm.php">Confirm your booking</a>
 		</li>
 
-		<div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden" style="background-color: black">
+		<div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden">
 			<div class="my-3 py-3 row">
 				<div class="col-sm">
 					<h2 class="display-5 font-weight-light">Training</h2>

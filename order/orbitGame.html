@@ -9,8 +9,8 @@
 			constructor(x, y, bright) {
 				this.x = canvas.width / 2;
 				this.y = Math.random() * canvas.height;
-				this.vx = mouseXspeed + (Math.random() - 0.5) * 10;
-				this.vy = mouseYspeed + (Math.random() - 0.5) * 4;
+				this.vx = mouseXspeed + (Math.random() - 0.5) * (canvas.width / 70);
+				this.vy = mouseYspeed + (Math.random() - 0.5) * (canvas.height / 200);
 				this.text = shipNames.pop()
 				if(bright) {
 					this.color = "hsla(" + "0, 0%, " + "100" + "%," + 100 + "%)"
@@ -100,7 +100,8 @@
 			}
 			*/
 			
-			
+			canvas.width = window.innerWidth - 10;
+			canvas.height = window.innerHeight - 10;
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			for(var i = 0; i < stars.length; i++) {
 				var outOfView = project2D(stars[i])
