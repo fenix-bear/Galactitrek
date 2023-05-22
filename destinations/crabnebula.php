@@ -22,7 +22,7 @@
             </li>
 
             <div class="mainContent mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-left text-white overflow-hidden"
-                style="background-color: black; width: 100%">
+                style="width: 100%">
                 <div class="my-3 py-3 row">
                     <div class="col-sm">
                         <h2 class="display-5 font-weight-light proximaColoring">Crab Nebula Supernova</h2>
