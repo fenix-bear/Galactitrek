@@ -10,7 +10,7 @@
             style="overflow: hidden;"></iframe>
     
     <div class="border rounded review review">
-      <h2>Elon Musk</h2>
+      <h2>CEO of AstroTours</h2>
       <div class="stars">
         <img src="/star-fill.svg" class="invertedIcon"></img>
         <img src="/star-fill.svg" class="invertedIcon"></img>
@@ -21,7 +21,7 @@
       <br>
       
       <i class="bi bi-quote"><img src="/quote.svg" class="invertedIcon"></img>I admit, Galactitrek is pretty solid. I went with their Executive suite on the largest ship at the time and found everything to be super high-quality. Even the boarding process is fun, maybe even better than my own company.<img src="/quote.svg" class="invertedIcon" style="transform: rotate(180deg);"></img></i>
-      <p class="normal">Elon Reeve Musk - May 19, 2284, Paris Space Peace Conference</p>
+      <p class="normal">CEO of AstroTours - May 19, 2284, Paris Space Peace Conference</p>
     </div>
     <br>
     <div class="border rounded review review">
