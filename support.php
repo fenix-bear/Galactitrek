@@ -4,7 +4,7 @@
         <div class="my-3 py-3 row">
             <div>
                 <h2 class="display-5 font-weight-light">Support:</h2>
-                <p class="lead font-weight-medium">If you are need in support regarding a booking for Galactitrek please send e-mails to support@galactitrek.com, calls to (444)4444-444 and faxes to (444)4444-445. If you are in need of a direct contact with a manager, please skype call (444)4444-446.</p>
+                <p class="lead font-weight-medium">If you are need in support regarding a booking for Galactitrek please send e-mails to galactitrek@gmail.com, calls to 1-800-555-GLTK and faxes to 1-800-555-GTFX. If you are in need of a direct contact with a manager, please skype call 1-800-555-GTSK.</p>
                 <h2 class="display-5 font-weight-light"></h2>
             </div>
             <div class="col-sm">
